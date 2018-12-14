@@ -20,7 +20,7 @@ var LOL = {
         defense: 4,
         magic: 3,
         difficulty: 4
-      },
+      },  
       image: {
         full: "Aatrox.png",
         sprite: "champion0.png",
