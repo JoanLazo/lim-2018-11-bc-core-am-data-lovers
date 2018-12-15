@@ -16,11 +16,11 @@ var LOL = {
       blurb:
         "Aatrox is a legendary warrior, one of only five that remain of an ancient race known as the Darkin. He wields his massive blade with grace and poise, slicing through legions in a style that is hypnotic to behold. With each foe felled, Aatrox's ...",
       info: {
-        attack: 8,
+        attack: 8,  
         defense: 4,
         magic: 3,
         difficulty: 4
-      },
+      },  
       image: {
         full: "Aatrox.png",
         sprite: "champion0.png",
