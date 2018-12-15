@@ -7,104 +7,112 @@
    <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="shortcut icon" href="https://lolstatic-a.akamaihd.net/lolkit/1.1.9/resources/images/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>League of Legends</title>
 </head>
 <body>
-   
+   <!-- Este es el navegador superior oscuro -->
+   <div id="general">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank">
-            <img src="./imagenes/lol_client_logo.png" width="30" height="30" class="d-inline-block align-top" alt="League of Legends">
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#INICIO">Inicio <span class="sr-only">(current)</span></a>
+      <a class="navbar-brand" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank">
+          <img src="./imagenes/lol_client_logo.png" width="30" height="30" class="d-inline-block align-top" alt="League of Legends">
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#INICIO">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#NOTICIAS">Noticias</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#NOTICIAS">Noticias</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#UNIVERSO">Universo</a>
-            </li>
-          </ul>
-        </div>
-      </nav>      
-    
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-            <img class="img-fluid" src="./imagenes/titulo.jpg" alt="League of Legends">
-        </div>
-      </div>    
-    </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#UNIVERSO">Universo</a>
+          </li>
+        </ul>
+      </div>
+    </nav>      
+  
+  <!-- Esta es la imagen debajo del nav -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+          <img class="img-fluid" src="./imagenes/titulo.jpg" alt="League of Legends" id="imagen-inicio">
+      </div>
+    </div>    
+  </div>
 
 <div class="separador"></div>
-
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-sm-12">
-          <div id="NOTICIAS">
-            <H1>NOTICIAS</H1>
-          </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="./imagenes/neeko_header.jpg" alt="Neeko">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./imagenes/ofertas.jpg" alt="Maestria de Campiones">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="./imagenes/actualizacion.jpg" alt="Actualizacion">
-                  </div>
+<!-- Esta es la parte de las noticias -->
+  <div class="container py-5" id="noticias-todo">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="NOTICIAS" id="NOTICIAS">
+          <h1>NOTICIAS</h1>
+        </div>
+          <p class="texto-noticia">Mira las novedades que tenemos para tí.</p>
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="./imagenes/neeko_header.jpg" alt="Neeko">
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
-                </a>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./imagenes/ofertas.jpg" alt="Maestria de Campiones">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="./imagenes/actualizacion.jpg" alt="Actualizacion">
+                </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="separador"></div>     
+      <div class="separador"></div>     
 
-
-    <div class="container py-5" id="UNIVERSO">
-      <div class="row">
-        <div class="col-sm-12">
-         <a href="universo.html"><h1>UNIVERSO</h1></a>
-          <p>Ingresa al universo de los campeones y conoce la historia que hay detras de cada batalla.</p>
-            <img  class="img-fluid" src="./imagenes/Campiones.jpeg" alt="Maestria de Campiones">
+<!-- Esta es la parte de link a los campeones -->
+  <div class="container py-5" id="UNIVERSO">
+    <div class="row">
+      <div class="col-sm-12">
+        <div>
+            <a href="universo.html" class="links"><h1 class="universo-titulo">UNIVERSO</h1></a>
         </div>
+        <p class="texto-universo">Ingresa al universo de los campeones y conoce la historia que hay detras de cada batalla.</p>
+          <img  class="img-fluid" src="./imagenes/universo.jpg" alt="Maestria de Campiones">
       </div>
     </div>
+  </div>
+  
+<div class="separador"></div>
+   </div>
     
- <div class="separador"></div>
     
+ <!-- Esta es la parte de la publicidad hacia LOL -->
 <footer class="container">
   <div class="row">
     <div class="col-sm-12">
-        <a href="https://www.riotgames.com/en"><img class="img-fluid" src="./imagenes/riotLogo.png" alt="RIOT GAMES"></a> 
-        <ul>
-          <a href="https://lan.leagueoflegends.com/es/game-info/get-started/what-is-lol/"><li>ACERCA DE LEAGUE OF LEGENDS</li></a>
-          <a href="https://signup.na.leagueoflegends.com/en/signup/index#/"><li>JUEGA GRATIS</li></a> 
-         <a href="http://leagueoflegends.la-surveyes2.sgizmo.com/s3/"><li>AYUDANOS A MEJORAR</li></a> 
+        <a href="https://www.riotgames.com/en"><img class="img-footer" src="./imagenes/riotLogo.png" alt="RIOT GAMES"></a> 
+        <ul class="lista-footer">
+          <a class="links" href="https://lan.leagueoflegends.com/es/game-info/get-started/what-is-lol/"><li>ACERCA DE LEAGUE OF LEGENDS</li></a>
+          <a class="links" href="https://signup.na.leagueoflegends.com/en/signup/index#/"><li>JUEGA GRATIS</li></a> 
+         <a  class="links" href="http://leagueoflegends.la-surveyes2.sgizmo.com/s3/"><li>AYUDANOS A MEJORAR</li></a> 
         </ul>
     </div>
   </div>

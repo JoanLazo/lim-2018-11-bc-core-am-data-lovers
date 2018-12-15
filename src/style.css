@@ -1,8 +1,86 @@
 body{
-    font-family: 'Cardo', serif;
     background-image: url(./imagenes/fondo3.jpg);
     background-size: 100vw 100vh;
     background-attachment: fixed;
     margin: 0;
-    color: rgba(160, 159, 88, 0.884);
+    
+}
+
+#general{
+    background-color: rgba(0, 0, 0, 0.603);
+    font-family: 'Cardo', serif;
+}
+#imagen-inicio{
+    image-orientation: center;
+    width: 100%;
+    
+}
+.separador{
+    border: 5px solid #91710acc;
+}
+.cards{
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+    color: #cca010cc;
+}
+
+.NOTICIAS{
+    color: rgb(247, 247, 247);
+    font-size: 20px;
+    background-color:rgba(0, 0, 0, 0.671);
+    padding: 15px;
+    border: 2px solid#cca010cc; 
+}
+
+.texto-noticia{
+    color: aliceblue;
+    font-size: 20px;
+    padding: 15px;
+    
+}
+.universo-titulo{
+    color: rgb(247, 247, 247);
+    font-size: 35px;
+    background-color: rgba(0, 0, 0, 0.603);
+    padding: 15px;
+    border: 2px solid #cca010cc;  
+}
+.texto-universo{
+    font-size: 20px;
+    color: aliceblue;
+    padding: 15px;
+}
+
+.links{
+    text-decoration: none;
+    color:#cca010cc;
+}
+.links:hover{
+    text-decoration-color: #cca010cc;
+    text-decoration-line: none;
+    text-decoration:#cca010cc;
+}
+.img-footer{
+    padding: 5%;
+    padding-left: 45%;
+}
+.lista-footer   {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration-line: none;
+    text-decoration: none;
+    color: aliceblue;
+    padding-bottom: 30px; 
+    list-style: none;
+}
+
+.titulo-cards{
+    text-align: center;
+    padding: 3%;
+    color: #cca010cc;
+    font-size: 35px;
+}
+.final-cards{
+    padding-bottom: 5%;
 }
