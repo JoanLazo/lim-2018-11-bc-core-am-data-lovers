@@ -1,6 +1,4 @@
 
-  const objData = LOL.data;
-  const arrLol = Object.values(objData);
 
   // let newArrName = [];
 
@@ -8,7 +6,6 @@
     //    newArrName.push(objData[arrLol[i]].name); 
     // }
     
-  const imagenCard = document.getElementById("imagen");
   const cardTitle = document.getElementById("nombre");
   const cardText = document.getElementById("titulo");
 
@@ -33,9 +30,5 @@
 
 // creando la funcion de orden ascendente
 
-const ordenarAscendente = function(){
-  
-}
-const ascedente = document.getElementById("ascendente");
-ascedente.addEventListener("click", ordenarAscendente )
-console.log(ordenarAscendente); 
+
+
