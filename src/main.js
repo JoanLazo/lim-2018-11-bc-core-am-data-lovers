@@ -19,8 +19,8 @@
   //  };
 
 // mostrando el nombre y el titulo en el card n° 1
-  const nombres = arrLol.map( arrLol =>  arrLol.name).filter( name => name === "Aatrox");
-  const title = arrLol.map( arrLol =>  arrLol.title).filter( name => name === "the Darkin Blade");
+  // const nombres = arrLol.map( arrLol =>  arrLol.name).filter( name => name === "Aatrox");
+  // const title = arrLol.map( arrLol =>  arrLol.title).filter( name => name === "the Darkin Blade");
   
   
   // cardTitle.innerHTML = `<h5>${nombres}</h5>`

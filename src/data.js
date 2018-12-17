@@ -3,6 +3,23 @@
 const objData = LOL.data;
 const arrLol = Object.values(objData);
 
+const cardSolo = document.getElementsByClassName("card")
+const textoNombre = document.getElementsByClassName("card-title");
+const textoTitulo = document.getElementsByClassName("card-texto");
+
+let prueba1;
+
+for(let i = 0 ; i<objData.length ; i++){
+   
+   prueba1.ClassName = "card-title"
+}
+
+ let mostrarNombre = LOL.data[objData[i]]; 
+ const mostrarName = mostrarNombre.name;
+ const mostrarTitle = mostrarNombre.title;
+ textoNombre.innerHTML = mostrarName;
+ console.log(mostrarName);
+
  const ordenarAscendente = () => {
   const textoNombre = document.getElementById("nombre");
   let arrOrdenado = arrLol.map( arrLol => arrLol.name).sort();
@@ -29,4 +46,6 @@ const arrLol = Object.values(objData);
 
 
 
-window.ordenarAscendente = ordenarAscendente;
+window.lol = {
+    ordenarAscendente
+};
