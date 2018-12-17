@@ -16,49 +16,49 @@ body{
     
 }
 .separador{
-    border: 5px solid #91710acc;
+    border: 5px solid #937341;
 }
 .cards{
     font-family: 'Cardo', serif;
     font-size: 20px;
-    color: #cca010cc;
+    color: #937341;
 }
 
 .NOTICIAS{
-    color: rgb(247, 247, 247);
+    color: #937341;
     font-size: 20px;
     background-color:rgba(0, 0, 0, 0.671);
     padding: 15px;
-    border: 2px solid#cca010cc; 
+    border: 2px solid#937341; 
 }
 
 .texto-noticia{
-    color: aliceblue;
+    color: #f1e6d0;
     font-size: 20px;
     padding: 15px;
     
 }
 .universo-titulo{
-    color: rgb(247, 247, 247);
+    color: #937341;
     font-size: 35px;
     background-color: rgba(0, 0, 0, 0.603);
     padding: 15px;
-    border: 2px solid #cca010cc;  
+    border: 2px solid #937341;  
 }
 .texto-universo{
     font-size: 20px;
-    color: aliceblue;
+    color: #f1e6d0;
     padding: 15px;
 }
 
 .links{
     text-decoration: none;
-    color:#cca010cc;
+    color:#937341;
 }
 .links:hover{
-    text-decoration-color: #cca010cc;
+    text-decoration-color: #937341;
     text-decoration-line: none;
-    text-decoration:#cca010cc;
+    text-decoration:#937341
 }
 .img-footer{
     padding: 5%;
@@ -70,7 +70,7 @@ body{
     justify-content: space-between;
     text-decoration-line: none;
     text-decoration: none;
-    color: aliceblue;
+    color: #f1e6d0;
     padding-bottom: 30px; 
     list-style: none;
 }
@@ -78,7 +78,7 @@ body{
 .titulo-cards{
     text-align: center;
     padding: 3%;
-    color: #cca010cc;
+    color: #937341;
     font-size: 35px;
 }
 .final-cards{

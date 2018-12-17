@@ -37,20 +37,20 @@
  <!--Nav secundario para la busqueda y el filtro  -->
 <nav class="navbar navbar-light bg-black-50">
         <form class="form-inline" action="javascript:void(0);" id="formulario">
-            <input class="form-control mr-sm-2" list="order" name="order" placeholder="Ordenar" aria-label="Ordenar" id="ordenar"> 
-                    <datalist id="order">
-                     <option value="A - Z" id="ascendente">
-                     <option value="Z - A" id="descendente">
-                     </datalist>
+            <select  class="form-control mr-sm-2" name="ordenar" id="ordenar">
+              <option value="A-Z" id="ascendente">Ordenar de A - Z</option>
+              <option value="Z-A" id="descendente">Ordenar de Z - A</option>
+            </select>
+                    
+           <select class="form-control mr-sm-2" name="filtro" id="filtro">
+            <option value="Tank">Tank</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Mage">Mage</option>
+            <option value="Support">Support</option>
+            <option value="Assassin">Assassin</option>
+            <option value="Marksman">Marksman</option>
+          </select>
 
-            <input class="form-control mr-sm-2" list="filter" name="filter" placeholder="Filtrar" aria-label="Filtrar" id="filtro">
-                    <datalist id="filter" class="dropdown-menu">
-                       <option class="dropdown-item"  value="Etiqueta" id="etiqueta">
-                       <option class="dropdown-item" value="Ataque" id="ataque">
-                       <option class="dropdown-item" value="Defensa" id="defensa">
-                       <option class="dropdown-item" value="Mágia" id="magia">
-                    <option class="dropdown-item" value="Dificultad" id="dificultad">
-                </datalist>
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="busqueda">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
         </form>               
@@ -58,17 +58,23 @@
 
 <!--Cards donde esta la info de los campeones -->
 <!-- Cada contenedor contiene 4 cards -->
-<div class="cards" id="cards-total">
+
 <div class="titulo-cards">
 <h1>CAMPEONES</h1>
 </div>
 <div class="separador"></div> 
-<div class="container pt-5">
+
+<div class="cards" id="cards-total">
+
+<div class="container pt-5" id="contenedor-cartas">
 <div class="row">
     <div class="col-sm-3 py-2">
+      <!-- <ul id="lista">
+        <li></li>
+      </ul> -->
             <div class="card" style="width: 15rem;">
                     <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg" id="imagen">
-                    <div class="card-body">
+                    <div class="card-body" id="card-body">
                       <h5 class="card-title" id="nombre"></h5>
                       <p class="card-text" id="titulo"></p>
                       <a href="#" class="btn btn-dark">HISTORIA</a>
@@ -208,7 +214,7 @@
             <div class="row">
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Brand_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -219,7 +225,7 @@
                 </div>
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -229,7 +235,7 @@
                 </div>
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -240,7 +246,7 @@
             
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15  rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -249,13 +255,13 @@
                               </div>
                 </div>
             </div>
-   </div>
+   </div> 
 
    <div class="container pt-5">
                 <div class="row">
                     <div class="col-sm-3 py-2">
                             <div class="card" style="width: 15rem;">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Cassiopeia_0.jpg" alt="Card image cap">
                                     <div class="card-body">
                                       <h5 class="card-title"></h5>
                                       <p class="card-text"></p>
@@ -266,7 +272,7 @@
                     </div>
                     <div class="col-sm-3 py-2">
                             <div class="card" style="width: 15rem;">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Chogath_0.jpg" alt="Card image cap">
                                     <div class="card-body">
                                       <h5 class="card-title"></h5>
                                       <p class="card-text"></p>
@@ -276,7 +282,7 @@
                     </div>
                     <div class="col-sm-3 py-2">
                             <div class="card" style="width: 15rem;">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Corki_0.jpg" alt="Card image cap">
                                     <div class="card-body">
                                       <h5 class="card-title"></h5>
                                       <p class="card-text"></p>
@@ -287,7 +293,7 @@
                 
                     <div class="col-sm-3 py-2">
                             <div class="card" style="width: 15  rem;">
-                                    <img class="card-img-top" src="" alt="Card image cap">
+                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg" alt="Card image cap">
                                     <div class="card-body">
                                       <h5 class="card-title"></h5>
                                       <p class="card-text"></p>
@@ -302,7 +308,7 @@
                     <div class="row">
                         <div class="col-sm-3 py-2">
                                 <div class="card" style="width: 15rem;">
-                                        <img class="card-img-top" src="" alt="Card image cap">
+                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg" alt="Card image cap">
                                         <div class="card-body">
                                           <h5 class="card-title"></h5>
                                           <p class="card-text"></p>
@@ -313,7 +319,7 @@
                         </div>
                         <div class="col-sm-3 py-2">
                                 <div class="card" style="width: 15rem;">
-                                        <img class="card-img-top" src="" alt="Card image cap">
+                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Draven_0.jpg" alt="Card image cap">
                                         <div class="card-body">
                                           <h5 class="card-title"></h5>
                                           <p class="card-text"></p>
@@ -323,7 +329,7 @@
                         </div>
                         <div class="col-sm-3 py-2">
                                 <div class="card" style="width: 15rem;">
-                                        <img class="card-img-top" src="" alt="Card image cap">
+                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/DrMundo_0.jpg" alt="Card image cap">
                                         <div class="card-body">
                                           <h5 class="card-title"></h5>
                                           <p class="card-text"></p>
@@ -334,7 +340,7 @@
                     
                         <div class="col-sm-3 py-2">
                                 <div class="card" style="width: 15  rem;">
-                                        <img class="card-img-top" src="" alt="Card image cap">
+                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ekko_0.jpg" alt="Card image cap">
                                         <div class="card-body">
                                           <h5 class="card-title"></h5>
                                           <p class="card-text"></p>
@@ -349,7 +355,7 @@
                         <div class="row">
                             <div class="col-sm-3 py-2">
                                     <div class="card" style="width: 15rem;">
-                                            <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Elise_0.jpg" alt="Card image cap">
                                             <div class="card-body">
                                               <h5 class="card-title"></h5>
                                               <p class="card-text"></p>
@@ -360,7 +366,7 @@
                             </div>
                             <div class="col-sm-3 py-2">
                                     <div class="card" style="width: 15rem;">
-                                            <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Evelynn_0.jpg" alt="Card image cap">
                                             <div class="card-body">
                                               <h5 class="card-title"></h5>
                                               <p class="card-text"></p>
@@ -370,7 +376,7 @@
                             </div>
                             <div class="col-sm-3 py-2">
                                     <div class="card" style="width: 15rem;">
-                                            <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg" alt="Card image cap">
                                             <div class="card-body">
                                               <h5 class="card-title"></h5>
                                               <p class="card-text"></p>
@@ -381,7 +387,7 @@
                         
                             <div class="col-sm-3 py-2">
                                     <div class="card" style="width: 15  rem;">
-                                            <img class="card-img-top" src="" alt="Card image cap">
+                                            <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiddlesticks_0.jpg" alt="Card image cap">
                                             <div class="card-body">
                                               <h5 class="card-title"></h5>
                                               <p class="card-text"></p>
@@ -396,7 +402,7 @@
         <div class="row">
                                 <div class="col-sm-3 py-2">
                                         <div class="card" style="width: 15rem;">
-                                                <img class="card-img-top" src="" alt="Card image cap">
+                                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiora_0.jpg" alt="Card image cap">
                                                 <div class="card-body">
                                                   <h5 class="card-title"></h5>
                                                   <p class="card-text"></p>
@@ -407,7 +413,7 @@
                                 </div>
                                 <div class="col-sm-3 py-2">
                                         <div class="card" style="width: 15rem;">
-                                                <img class="card-img-top" src="" alt="Card image cap">
+                                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fizz_0.jpg" alt="Card image cap">
                                                 <div class="card-body">
                                                   <h5 class="card-title"></h5>
                                                   <p class="card-text"></p>
@@ -417,7 +423,7 @@
                                 </div>
                                 <div class="col-sm-3 py-2">
                                         <div class="card" style="width: 15rem;">
-                                                <img class="card-img-top" src="" alt="Card image cap">
+                                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Galio_0.jpg" alt="Card image cap">
                                                 <div class="card-body">
                                                   <h5 class="card-title"></h5>
                                                   <p class="card-text"></p>
@@ -428,7 +434,7 @@
                             
                                 <div class="col-sm-3 py-2">
                                         <div class="card" style="width: 15  rem;">
-                                                <img class="card-img-top" src="" alt="Card image cap">
+                                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gangplank_0.jpg" alt="Card image cap">
                                                 <div class="card-body">
                                                   <h5 class="card-title"></h5>
                                                   <p class="card-text"></p>
@@ -443,7 +449,7 @@
                                 <div class="row">
                                     <div class="col-sm-3 py-2">
                                             <div class="card" style="width: 15rem;">
-                                                    <img class="card-img-top" src="" alt="Card image cap">
+                                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Garen_0.jpg" alt="Card image cap">
                                                     <div class="card-body">
                                                       <h5 class="card-title"></h5>
                                                       <p class="card-text"></p>
@@ -454,7 +460,7 @@
                                     </div>
                                     <div class="col-sm-3 py-2">
                                             <div class="card" style="width: 15rem;">
-                                                    <img class="card-img-top" src="" alt="Card image cap">
+                                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_0.jpg" alt="Card image cap">
                                                     <div class="card-body">
                                                       <h5 class="card-title"></h5>
                                                       <p class="card-text"></p>
@@ -464,7 +470,7 @@
                                     </div>
                                     <div class="col-sm-3 py-2">
                                             <div class="card" style="width: 15rem;">
-                                                    <img class="card-img-top" src="" alt="Card image cap">
+                                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gragas_0.jpg" alt="Card image cap">
                                                     <div class="card-body">
                                                       <h5 class="card-title"></h5>
                                                       <p class="card-text"></p>
@@ -475,7 +481,7 @@
                                 
                                     <div class="col-sm-3 py-2">
                                             <div class="card" style="width: 15  rem;">
-                                                    <img class="card-img-top" src="" alt="Card image cap">
+                                                    <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Graves_0.jpg" alt="Card image cap">
                                                     <div class="card-body">
                                                       <h5 class="card-title"></h5>
                                                       <p class="card-text"></p>
@@ -490,7 +496,7 @@
         <div class="row">
                                         <div class="col-sm-3 py-2">
                                                 <div class="card" style="width: 15rem;">
-                                                        <img class="card-img-top" src="" alt="Card image cap">
+                                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Hecarim_0.jpg" alt="Card image cap">
                                                         <div class="card-body">
                                                           <h5 class="card-title"></h5>
                                                           <p class="card-text"></p>
@@ -501,7 +507,7 @@
                                         </div>
                                         <div class="col-sm-3 py-2">
                                                 <div class="card" style="width: 15rem;">
-                                                        <img class="card-img-top" src="" alt="Card image cap">
+                                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Heimerdinger_0.jpg" alt="Card image cap">
                                                         <div class="card-body">
                                                           <h5 class="card-title"></h5>
                                                           <p class="card-text"></p>
@@ -511,7 +517,7 @@
                                         </div>
                                         <div class="col-sm-3 py-2">
                                                 <div class="card" style="width: 15rem;">
-                                                        <img class="card-img-top" src="" alt="Card image cap">
+                                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Illaoi_0.jpg" alt="Card image cap">
                                                         <div class="card-body">
                                                           <h5 class="card-title"></h5>
                                                           <p class="card-text"></p>
@@ -522,7 +528,7 @@
                                     
                                         <div class="col-sm-3 py-2">
                                                 <div class="card" style="width: 15  rem;">
-                                                        <img class="card-img-top" src="" alt="Card image cap">
+                                                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg" alt="Card image cap">
                                                         <div class="card-body">
                                                           <h5 class="card-title"></h5>
                                                           <p class="card-text"></p>
@@ -537,7 +543,7 @@
             <div class="row">
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ivern_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -548,7 +554,7 @@
                 </div>
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Janna_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -558,7 +564,7 @@
                 </div>
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -569,7 +575,7 @@
             
                 <div class="col-sm-3 py-2">
                         <div class="card" style="width: 15  rem;">
-                                <img class="card-img-top" src="" alt="Card image cap">
+                                <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jax_0.jpg" alt="Card image cap">
                                 <div class="card-body">
                                   <h5 class="card-title"></h5>
                                   <p class="card-text"></p>
@@ -584,7 +590,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jayce_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -595,7 +601,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jhin_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -605,7 +611,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -616,7 +622,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -631,7 +637,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karma_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -642,7 +648,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Karthus_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -652,7 +658,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kassadin_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -663,7 +669,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -677,7 +683,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayle_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -688,7 +694,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kennen_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -698,7 +704,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Khazix_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -709,7 +715,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kindred_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -723,7 +729,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kled_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -734,7 +740,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/KogMaw_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -744,7 +750,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leblanc_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -755,7 +761,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/LeeSin_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -769,7 +775,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Leona_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -780,7 +786,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lissandra_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -790,7 +796,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -801,7 +807,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lulu_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -815,7 +821,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lux_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -826,7 +832,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -836,7 +842,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malzahar_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -847,7 +853,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -861,7 +867,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Malphite_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -872,7 +878,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MasterYi_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -882,7 +888,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -893,7 +899,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -907,7 +913,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Mordekaiser_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -918,7 +924,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Morgana_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -928,7 +934,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nami_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -939,7 +945,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nasus_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -953,7 +959,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nautilus_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -964,7 +970,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nidalee_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -974,7 +980,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nocturne_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -985,7 +991,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nunu_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -999,7 +1005,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Olaf_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1010,7 +1016,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1020,7 +1026,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pantheon_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1031,7 +1037,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1045,7 +1051,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Quinn_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1056,7 +1062,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rammus_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1066,7 +1072,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/RekSai_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1077,7 +1083,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1091,7 +1097,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rengar_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1102,7 +1108,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1112,7 +1118,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rumble_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1123,7 +1129,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ryze_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1137,7 +1143,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sejuani_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1148,7 +1154,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shaco_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1158,7 +1164,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shen_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1169,7 +1175,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Shyvana_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1183,7 +1189,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Singed_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1194,7 +1200,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sion_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1204,7 +1210,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sivir_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1215,7 +1221,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Skarner_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1229,7 +1235,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sona_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1240,7 +1246,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Soraka_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1250,7 +1256,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Swain_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1261,7 +1267,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Syndra_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1275,7 +1281,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/TahmKench_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1286,7 +1292,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taliyah_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1296,7 +1302,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Talon_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1307,7 +1313,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Taric_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1321,7 +1327,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1332,7 +1338,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1342,7 +1348,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1353,7 +1359,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Trundle_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1367,7 +1373,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tryndamere_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1378,7 +1384,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Maokai_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1388,7 +1394,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1399,54 +1405,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-dark">HISTORIA</a>
-                        </div>
-                      </div>
-        </div>
-    </div>
-</div>
-
-<div class="container pt-5">
-    <div class="row">
-        <div class="col-sm-3 py-2">
-                <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-dark">HISTORIA</a>
-                        </div>
-                      </div>
-                      
-        </div>
-        <div class="col-sm-3 py-2">
-                <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-dark">HISTORIA</a>
-                        </div>
-                      </div>
-        </div>
-        <div class="col-sm-3 py-2">
-                <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title"></h5>
-                          <p class="card-text"></p>
-                          <a href="#" class="btn btn-dark">HISTORIA</a>
-                        </div>
-                      </div>
-        </div>
-    
-        <div class="col-sm-3 py-2">
-                <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Udyr_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1461,7 +1420,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Urgot_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1472,7 +1431,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Varus_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1482,7 +1441,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1493,7 +1452,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Veigar_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1508,7 +1467,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Velkoz_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1519,7 +1478,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vi_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1529,7 +1488,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viktor_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1540,7 +1499,7 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vladimir_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1555,7 +1514,7 @@
     <div class="row">
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1566,7 +1525,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Warwick_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1576,7 +1535,7 @@
         </div>
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Xerath_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1587,7 +1546,54 @@
     
         <div class="col-sm-3 py-2">
                 <div class="card" style="width: 15  rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/XinZhao_0.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-dark">HISTORIA</a>
+                        </div>
+                      </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-sm-3 py-2">
+                <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-dark">HISTORIA</a>
+                        </div>
+                      </div>
+                      
+        </div>
+        <div class="col-sm-3 py-2">
+                <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yorick_0.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-dark">HISTORIA</a>
+                        </div>
+                      </div>
+        </div>
+        <div class="col-sm-3 py-2">
+                <div class="card" style="width: 15rem;">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zac_0.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                          <a href="#" class="btn btn-dark">HISTORIA</a>
+                        </div>
+                      </div>
+        </div>
+    
+        <div class="col-sm-3 py-2">
+                <div class="card" style="width: 15  rem;">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1600,9 +1606,9 @@
 
 <div class="container pt-5">
     <div class="row justify-content-center">
-        <div class="col-sm-3 py-6">
+        <div class="col-sm-3 py-6 ">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ziggs_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1613,7 +1619,7 @@
         </div>
         <div class="col-sm-3 py-6">
                 <div class="card" style="width: 15rem;">
-                        <img class="card-img-top" src="" alt="Card image cap">
+                        <img class="card-img-top" src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zyra_0.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h5 class="card-title"></h5>
                           <p class="card-text"></p>
@@ -1621,7 +1627,7 @@
                         </div>
                       </div>
         </div>
-        
+      </div>
     </div>
 </div>
 
@@ -1629,8 +1635,8 @@
 </div>
 <div class="final-cards"></div>
 <div class="separador"></div>       
-        </div>
-    
+        
+      
     
 <!-- Esta es la parte de la publicidad hacia LOL -->
 <footer class="container">

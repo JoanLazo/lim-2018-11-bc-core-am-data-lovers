@@ -1,6 +1,4 @@
 
-  const objData = LOL.data;
-  const arrLol = Object.values(objData);
 
   // let newArrName = [];
 
@@ -8,9 +6,8 @@
     //    newArrName.push(objData[arrLol[i]].name); 
     // }
     
-  const imagenCard = document.getElementById("imagen");
-  const cardTitle = document.getElementById("nombre");
-  const cardText = document.getElementById("titulo");
+  // const cardTitle = document.getElementById("nombre");
+  // const cardText = document.getElementById("titulo");
 
 
   // Creando una funcion para que se muestre la data en los cards
@@ -26,21 +23,21 @@
   const title = arrLol.map( arrLol =>  arrLol.title).filter( name => name === "the Darkin Blade");
   
   
-  cardTitle.innerHTML = `<h5>${nombres}</h5>`
-  cardText.innerHTML = `<p>${title}</p>`
+  // cardTitle.innerHTML = `<h5>${nombres}</h5>`
+  // cardText.innerHTML = `<p>${title}</p>`
   
 
 
 
 // creando la funcion de orden ascendente
 
-const ordenarAscendente = function(){
+// const ordenarAscendente = function(){
   
 
-const ascedente = document.getElementById("ascendente");
-ascedente.addEventListener("click", ordenarAscendente )
- }
-console.log(ordenarAscendente); 
+// const ascedente = document.getElementById("ascendente");
+// ascedente.addEventListener("click", ordenarAscendente )
+//  }
+// console.log(ordenarAscendente); 
 
 //Creando la función del buscador
 
