@@ -1,4 +1,13 @@
+// esta es una función de ejemplo
+// puedes ver como agregamos la función a nuestro objeto global window
 
+const mostrarPersonajes = (arr) => {
+    newArray = [];
+    for( let i = 0 ; i <arr.length; i++){
+      newArray.push({name: arr[i].name , title: arr[i].title, splash: arr[i].splash , info: arr[i].info , tags: arr[i].tags})
+    }
+    return newArray;
+}
 
 const ordenarAscendente = () => {
   const textoNombre = document.getElementById("nombre");
@@ -30,9 +39,6 @@ const listaPersonajes = (arr) => {
     console.log(newArray);
   }
 
-
-
   window.lol = {
     mostrarPersonajes
   };
-
