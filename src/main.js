@@ -1,3 +1,10 @@
+const objLol = LOL.data;
+const arrLol = Object.values(objLol);
+
+arrLol.forEach(objDatos => {
+  console.log(objDatos)
+});
+  
 
  // let newArrName = [];
 
@@ -8,6 +15,7 @@
   // const cardTitle = document.getElementById("nombre");
   // const cardText = document.getElementById("titulo");
   
+let ataque = arrLol.filter(arrLo => arrLo.attack >= 2);
 
 // const ascedente = document.getElementById("ascendente");
 // ascedente.addEventListener("click", ordenarAscendente )
