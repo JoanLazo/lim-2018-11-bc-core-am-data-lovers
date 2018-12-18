@@ -14,96 +14,98 @@
   <link rel="stylesheet" href="style.css" />
   <title>League of Legends</title>
 </head>
+
 <body>
-        <!-- NAV DE CAMPEONES COLOR NEGRO -->
-        <div id="general">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank">
-                        <img src="./imagenes/lol_client_logo.png" width="30" height="30" class="d-inline-block align-top" alt="League of Legends">
-                      </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav">
-                    <li class="nav-item ">
-                      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#CAMPEONES">Campeones</a>
-                    </li>
-                  </ul>
-                </div>
-  </nav>      
+  <!-- NAV DE CAMPEONES COLOR NEGRO -->
+  <div id="general">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://signup.na.leagueoflegends.com/en/signup/index#/" target="_blank">
+        <img src="./imagenes/lol_client_logo.png" width="30" height="30" class="d-inline-block align-top" alt="League of Legends">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#CAMPEONES">Campeones</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!--Nav secundario para la busqueda y el filtro  -->
+  <nav class="navbar navbar-light bg-black-50">
+    <form class="form-inline" action="javascript:void(0);" id="formulario">
+      <select class="form-control mr-sm-2" name="ordenar" id="ordenar">
+        <option value="A-Z" id="ascendente">Ordenar de A - Z</option>
+        <option value="Z-A" id="descendente">Ordenar de Z - A</option>
+      </select>
 
- <!--Nav secundario para la busqueda y el filtro  -->
-<nav class="navbar navbar-light bg-black-50">
-        <form class="form-inline" action="javascript:void(0);" id="formulario">
-            <select  class="form-control mr-sm-2" name="ordenar" id="ordenar">
-              <option value="A-Z" id="ascendente">Ordenar de A - Z</option>
-              <option value="Z-A" id="descendente">Ordenar de Z - A</option>
-            </select>
-                    
-           <select class="form-control mr-sm-2" name="filtro" id="filtro">
-            <option value="Tank">Tank</option>
-            <option value="Fighter">Fighter</option>
-            <option value="Mage">Mage</option>
-            <option value="Support">Support</option>
-            <option value="Assassin">Assassin</option>
-            <option value="Marksman">Marksman</option>
-          </select>
+      <select class="form-control mr-sm-2" name="filtro" id="filtro">
+        <option value="Tank">Tank</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Mage">Mage</option>
+        <option value="Support">Support</option>
+        <option value="Assassin">Assassin</option>
+        <option value="Marksman">Marksman</option>
+      </select>
 
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="busqueda">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
-        </form>               
-  </nav>   
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="busqueda">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
+    </form>
+  </nav>
 
-<!--Cards donde esta la info de los campeones -->
-<!-- Cada contenedor contiene 4 cards -->
+  <!--Cards donde esta la info de los campeones -->
+  <!-- Cada contenedor contiene 4 cards -->
 
-<div class="titulo-cards">
-<h1>CAMPEONES</h1>
-</div>
-<div class="separador"></div> 
+  <div class="titulo-cards">
+    <h1>CAMPEONES</h1>
+  </div>
+  <div class="separador"></div>
 
-<div class="container d-flex flex-sm-wrap justify-content-around p-2" id="cards-total">
-</div>
+  <div class="container d-flex flex-sm-wrap justify-content-around p-2" id="cards-total">
+  </div>
 
-<div class="final-cards"></div>
+  <div class="final-cards"></div>
 
-<div class="separador"></div>       
-        
-      
-    
-<!-- Esta es la parte de la publicidad hacia LOL -->
-<footer class="container">
+  <div class="separador"></div>
+
+
+
+  <!-- Esta es la parte de la publicidad hacia LOL -->
+  <footer class="container">
     <div class="row">
       <div class="col-sm-12">
-          <a href="https://www.riotgames.com/en"><img class="img-footer" src="./imagenes/riotLogo.png" alt="RIOT GAMES"></a> 
-          <ul class="lista-footer">
-            <a class="links" href="https://lan.leagueoflegends.com/es/game-info/get-started/what-is-lol/">
-              <li>ACERCA DE LEAGUE OF LEGENDS</li>
-            </a>
-            <a class="links" href="https://signup.na.leagueoflegends.com/en/signup/index#/">
-              <li>JUEGA GRATIS</li>
-            </a>
-            <a class="links" href="http://leagueoflegends.la-surveyes2.sgizmo.com/s3/">
-              <li>AYUDANOS A MEJORAR</li>
-            </a>
-          </ul>
-        </div>
+        <a href="https://www.riotgames.com/en"><img class="img-footer" src="./imagenes/riotLogo.png" alt="RIOT GAMES"></a>
+        <ul class="lista-footer">
+          <a class="links" href="https://lan.leagueoflegends.com/es/game-info/get-started/what-is-lol/">
+            <li>ACERCA DE LEAGUE OF LEGENDS</li>
+          </a>
+          <a class="links" href="https://signup.na.leagueoflegends.com/en/signup/index#/">
+            <li>JUEGA GRATIS</li>
+          </a>
+          <a class="links" href="http://leagueoflegends.la-surveyes2.sgizmo.com/s3/">
+            <li>AYUDANOS A MEJORAR</li>
+          </a>
+        </ul>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="./data/lol/lol.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"></script>
+  <script src="./data/lol/lol.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,38 +1,9 @@
 const objLol = LOL.data;
-const arrLol = Object.values(objLol);
-
-arrLol.forEach(objDatos => {
-  console.log(objDatos)
-});
-  
-
- // let newArrName = [];
-
-    // for(let i=0 ; i < arrLol.length ; i++){
-    //    newArrName.push(objData[arrLol[i]].name); 
-    // }
-    
-  // const cardTitle = document.getElementById("nombre");
-  // const cardText = document.getElementById("titulo");
-  
-let ataque = arrLol.filter(arrLo => arrLo.attack >= 2);
-
-// const ascedente = document.getElementById("ascendente");
-// ascedente.addEventListener("click", ordenarAscendente )
-//  }
-// console.log(ordenarAscendente); 
-
-//const buscandoHeroe = document.getElementById("buscar")
-const objLol = LOL.data;
 const arrLolTotal = Object.values(objLol);
-
-const arrLolEspecifico = lol.mostrarPersonajes(arrLolTotal);
-
-const containerCardTotal = document.getElementById("cards-total");
-
-
+const arrLolEspecifico = dataL.mostrarPersonajes(arrLolTotal);
+const containerCardTotal = document.getElementById('cards-total');
 const crearCartasLol = (data) => {
-  let templateListOfCards = "";
+  let templateListOfCards = '';
   data.forEach((arrLolEspecifico) => {
     const card = `
     <div class="d-flex flex-sm-wrap pt-5" id="contenedor-cartas">
@@ -56,8 +27,8 @@ const crearCartasLol = (data) => {
               </div>
               </div>     
     `;
-  templateListOfCards += card;
-  })
+    templateListOfCards += card;
+  });
   containerCardTotal.innerHTML = templateListOfCards;
-}
- crearCartasLol(arrLolEspecifico);
+};
+crearCartasLol(arrLolEspecifico);

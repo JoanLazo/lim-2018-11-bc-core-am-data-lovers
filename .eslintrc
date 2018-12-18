@@ -36,6 +36,8 @@
  },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false
+    "example": false,
+    "dataL":false,
+    "LOL":false
   }
 }
