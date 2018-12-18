@@ -5,7 +5,7 @@
 * [Preámbulo](#preámbulo)
 * [Descripción](#resumen-del-producto)
 * [Definición del producto](#definición-del-producto)
-* [Problemática](#problematica)
+* [Problemática/Necesidad](#problematica-/-necesidad)
 * [Solución del problema](#solucion-del-problema)
 * [Proceso y decisiones de diseño](#proceso-y-decisiones-de-diseño)
 * [Usuarios y su relación con el producto](#usuarios-y-su-relacion-con-el-producto)

@@ -1,24 +1,15 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-const objData = LOL.data;
-const arrLol = Object.values(objData);
 
-const cardSolo = document.getElementsByClassName("card")
-const textoNombre = document.getElementsByClassName("card-title");
-const textoTitulo = document.getElementsByClassName("card-texto");
-
-let prueba1;
-
-for(let i = 0 ; i<objData.length ; i++){
-   
-   prueba1.ClassName = "card-title"
+const mostrarPersonajes = (arr) => {
+    newArray = [];
+    for( let i = 0 ; i <arr.length; i++){
+      newArray.push({name: arr[i].name , title: arr[i].title, splash: arr[i].splash , info: arr[i].info , tags: arr[i].tags})
+    }
+    return newArray;
 }
+    
 
- let mostrarNombre = LOL.data[objData[i]]; 
- const mostrarName = mostrarNombre.name;
- const mostrarTitle = mostrarNombre.title;
- textoNombre.innerHTML = mostrarName;
- console.log(mostrarName);
 
  const ordenarAscendente = () => {
   const textoNombre = document.getElementById("nombre");
@@ -45,7 +36,6 @@ for(let i = 0 ; i<objData.length ; i++){
 // console.log(ordenarDescendente());
 
 
-
 window.lol = {
-    ordenarAscendente
+    mostrarPersonajes
 };

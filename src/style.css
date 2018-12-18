@@ -84,3 +84,12 @@ body{
 .final-cards{
     padding-bottom: 5%;
 }
+
+#cards-total{
+    color: #0a0a0c;
+    font-size: 20px;
+}
+
+#card-body{
+    background-color: #f1e6d0;
+}
