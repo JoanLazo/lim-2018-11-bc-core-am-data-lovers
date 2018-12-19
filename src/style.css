@@ -80,6 +80,7 @@ body{
     padding: 3%;
     color: #937341;
     font-size: 35px;
+    font-family: 'Cardo', serif;
 }
 .final-cards{
     padding-bottom: 5%;
@@ -88,6 +89,7 @@ body{
 #cards-total{
     color: #0a0a0c;
     font-size: 20px;
+    font-family: 'Cardo', serif;
 }
 
 #card-body{
