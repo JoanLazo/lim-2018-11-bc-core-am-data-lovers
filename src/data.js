@@ -2,46 +2,83 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 const mostrarPersonajes = (arr) => {
-  let newArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArray.push({
-      name: arr[i].name,
-      title: arr[i].title,
-      splash: arr[i].splash,
-      info: arr[i].info,
-      tags: arr[i].tags
-    });
-  }
-  return newArray;
+  return arr.map(obj => Object.assign({}, obj, {
+    name: obj.name,
+    title: obj.title,
+    splash: obj.splash,
+    info: obj.info,
+    tags: obj.tags
+  }));
 };
 
-// const ordenarAscendente = () => {
-//   const textoNombre = document.getElementById("nombre");
-//   let arrOrdenado = arrLol.map(arrLol => arrLol.name).sort();
-//   return textoNombre.innerHTML = arrOrdenado;
-// };
-// const ordenarDescendente = () => {
-//   const textoNombre = document.getElementById("nombre");
-//   const arrReverse = arrLol.map(arrLol => arrLol.name).reverse();
-//   return textoNombre.innerHTML = arrReverse;
-// };
-// const inputOrdenar = document.getElementById("ordenar");
-// const optionAs = document.getElementById("ascendente");
-// const optionDes = document.getElementById("descendente");
-// inputOrdenar.addEventListener("click", ordenarAscendente);
-// inputOrdenar.addEventListener("change", ordenarDescendente);
-// const listaPersonajes = (arr) => {
-//   const newArray = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     newArray.push({
-//       name: arr[i].name,
-//       title: arr[i].title,
-//       img: arr[i].img,
-//       attackrange: arr[i].stats.attackrange
-//     });
-//   }
-// };
+const ordenarDataLol = (arr) => {
+  return arr.map(obj => Object.assign([], obj, {
+    name: obj.name,
+    title: obj.title,
+    info: obj.info,
+    splash: obj.splash
+  })).sort();
+};
+
+const ordenarDataLolalrevez = (arr) => {
+  return arr.map(obj => Object.assign([], obj, {
+    name: obj.name,
+    title: obj.title,
+    info: obj.info,
+    splash: obj.splash
+  })).reverse();
+};
+
+const filtraDataTags = (arr) => {
+  return arr.map(obj => Object.assign({}, obj, {
+    name: obj.name,
+    title: obj.title,
+    splash: obj.splash,
+    info: obj.info,
+    tags: obj.tags
+  })).filter((obj) => {
+    if (obj.tags === 'Tank') {
+      obj.tags;
+    } else if (obj.tags === 'Fighter') {
+      obj.tags;
+    } else if (obj.tags === 'Assassin') {
+      obj.tags;
+    } else if (obj.tags === 'Mage') {
+      obj.tags;
+    } else if (obj.tags === 'Support') {
+      obj.tags;
+    } else if (obj.tags === 'Marksamn') {
+      obj.tags;
+    } else
+      obj.tags;
+  });
+};
+
+const filtrarPorBusqueda = (arr) => {
+  const buscarPorNombre = arr.reduce((acum, ele) => {
+    if (ele.name === name.value && ele.name !== '') {
+      acum = ele.name;
+    }
+    return acum;
+  }, {});
+  return buscarPorNombre;
+};
+
+const reduceMayorAtaque = (arr) => {
+  const campeonMasAtaque = arr.reduce((acum, ele) => {
+    if (ele.info.attack >= 9) {
+      acum = ele.info.attack;
+    }
+    return acum;
+  }, {});
+  return campeonMasAtaque;
+};
 
 window.dataL = {
   mostrarPersonajes,
+  ordenarDataLol,
+  ordenarDataLolalrevez,
+  filtraDataTags,
+  filtrarPorBusqueda,
+  reduceMayorAtaque,
 };

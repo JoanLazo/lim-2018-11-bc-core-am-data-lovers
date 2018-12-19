@@ -1,6 +1,7 @@
 const objLol = LOL.data;
 const arrLolTotal = Object.values(objLol);
 const arrLolEspecifico = dataL.mostrarPersonajes(arrLolTotal);
+const nombresOrdenadosAscendente = dataL.ordenarDataLol(arrLolEspecifico);
 const containerCardTotal = document.getElementById('cards-total');
 const crearCartasLol = (data) => {
   let templateListOfCards = '';
@@ -32,3 +33,12 @@ const crearCartasLol = (data) => {
   containerCardTotal.innerHTML = templateListOfCards;
 };
 crearCartasLol(arrLolEspecifico);
+const selecOrdenarAscendente = document.getElementById('ascendente');
+const selecOrdenarDescendente = document.getElementById('descendente');
+const filtrarPorTank = document.getElementById('tank');
+const filtrarPorFighter = document.getElementById('fighter');
+const filtrarPorAssassin = document.getElementById('assassin');
+const filtrarPorMage = document.getElementById('mage');
+const filtrarPorSupport = document.getElementById('support');
+const filtrarPorMarksman = document.getElementById('marksman');
+const buscarCampeonPorNombre = document.getElementById('buscar');
