@@ -30,8 +30,6 @@ const ordenarDataLolDescendente = (arr) => {
     tags: obj.tags,
   })).reverse();
 };
-
-console.log(ordenarDataLolDescendente);
 const filtraDataTags = (arr) => {
   return arr.map(obj => Object.assign({}, obj, {
     splash: obj.splash,
@@ -41,7 +39,7 @@ const filtraDataTags = (arr) => {
     tags: obj.tags,
   })).filter((obj) => {
     if (obj.tags === 'Tank') {
-      obj.tags;
+      obj.tags;  
     } else if (obj.tags === 'Fighter') {
       obj.tags;
     } else if (obj.tags === 'Assassin') {

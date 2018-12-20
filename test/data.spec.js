@@ -105,7 +105,7 @@ describe('dataL', () => {
       expect(dataL.mostrarPersonajes(input)).toEqual(output1);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.mostrarPersonajes(input)).not.toEqual(output1);
+      expect(dataL.mostrarPersonajes(input)).not.toEqual(input);
     });
   });
 
