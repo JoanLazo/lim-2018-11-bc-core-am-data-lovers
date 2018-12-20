@@ -11,7 +11,7 @@ const mostrarPersonajes = (arr) => {
   }));
 };
 
-const ordenarDataLol = (arr) => {
+const ordenarDataLolAscendente = (arr) => {
   return arr.map(obj => Object.assign([], obj, {
     name: obj.name,
     title: obj.title,
@@ -20,7 +20,7 @@ const ordenarDataLol = (arr) => {
   })).sort();
 };
 
-const ordenarDataLolalrevez = (arr) => {
+const ordenarDataLolDescendente = (arr) => {
   return arr.map(obj => Object.assign([], obj, {
     name: obj.name,
     title: obj.title,
@@ -76,8 +76,8 @@ const reduceMayorAtaque = (arr) => {
 
 window.dataL = {
   mostrarPersonajes,
-  ordenarDataLol,
-  ordenarDataLolalrevez,
+  ordenarDataLolAscendente,
+  ordenarDataLolDescendente,
   filtraDataTags,
   filtrarPorBusqueda,
   reduceMayorAtaque,
