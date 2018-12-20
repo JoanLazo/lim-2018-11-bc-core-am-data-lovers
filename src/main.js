@@ -42,4 +42,3 @@ const filtrarPorMage = document.getElementById('mage');
 const filtrarPorSupport = document.getElementById('support');
 const filtrarPorMarksman = document.getElementById('marksman');
 const buscarCampeonPorNombre = document.getElementById('buscar');*/
-console.log(nombresOrdenadosAscendente);
