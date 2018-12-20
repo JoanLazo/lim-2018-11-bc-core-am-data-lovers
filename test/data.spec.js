@@ -105,13 +105,13 @@ describe('dataL', () => {
       expect(dataL.mostrarPersonajes(input)).toEqual(output1);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.mostrarPersonajes(input)).not.toEqual(input);
+      expect(dataL.mostrarPersonajes(input)).not.toEqual(output1);
     });
   });
 
   describe('dataL.ordenarDataLolAscendente', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.ordenarDataLol).toBe('function');
+      expect(typeof dataL.ordenarDataLolAscendente).toBe('function');
     });
     it('deberia retornar de forma ascendente, de A-Z', () => {
       expect(dataL.ordenarDataLolAscendente(input)).toEqual(output2);

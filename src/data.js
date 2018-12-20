@@ -7,35 +7,38 @@ const mostrarPersonajes = (arr) => {
     title: obj.title,
     splash: obj.splash,
     info: obj.info,
-    tags: obj.tags
+    tags: obj.tags,
   }));
 };
 
 const ordenarDataLolAscendente = (arr) => {
-  return arr.map(obj => Object.assign([], obj, {
+  return arr.map(obj => Object.assign({}, obj, {
+    splash: obj.splash,
     name: obj.name,
     title: obj.title,
     info: obj.info,
-    splash: obj.splash
+    tags: obj.tags,
   })).sort();
 };
 
 const ordenarDataLolDescendente = (arr) => {
-  return arr.map(obj => Object.assign([], obj, {
+  return arr.map(obj => Object.assign({}, obj, {
+    splash: obj.splash,
     name: obj.name,
     title: obj.title,
     info: obj.info,
-    splash: obj.splash
+    tags: obj.tags,
   })).reverse();
 };
 
+console.log(ordenarDataLolDescendente);
 const filtraDataTags = (arr) => {
   return arr.map(obj => Object.assign({}, obj, {
+    splash: obj.splash,
     name: obj.name,
     title: obj.title,
-    splash: obj.splash,
     info: obj.info,
-    tags: obj.tags
+    tags: obj.tags,
   })).filter((obj) => {
     if (obj.tags === 'Tank') {
       obj.tags;
