@@ -1,7 +1,7 @@
 const objLol = LOL.data;
 const arrLolTotal = Object.values(objLol);
 const arrLolEspecifico = dataL.mostrarPersonajes(arrLolTotal);
-const nombresOrdenadosAscendente = dataL.ordenarDataLolAscendente(arrLolEspecifico);
+//const nombresOrdenadosAscendente = dataL.ordenarDataLolAscendente(arrLolEspecifico);
 const containerCardTotal = document.getElementById('cards-total');
 const crearCartasLol = (data) => {
   let templateListOfCards = '';
