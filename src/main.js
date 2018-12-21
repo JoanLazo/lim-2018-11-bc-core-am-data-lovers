@@ -21,7 +21,6 @@ const crearCartasLol = (data) => {
                         Dificultad: ${arrLolEspecifico.info.difficulty}
                        </p>
                       <p class="card-text" id="tipo">Tipo: ${arrLolEspecifico.tags}<p>
-                      <a href="#" class="btn btn-dark">HISTORIA</a>
                     </div>
                   </div>
                 </div>

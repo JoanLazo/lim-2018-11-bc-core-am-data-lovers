@@ -62,7 +62,7 @@ body{
 .lista-footer   {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     text-decoration-line: none;
     text-decoration: none;
     color: #f1e6d0;
@@ -89,4 +89,8 @@ body{
 
 #card-body{
     background-color: #f1e6d0;
+}
+#link-universo{
+    font-size: 20px;
+    border: 2px solid #937341;
 }
