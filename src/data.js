@@ -11,75 +11,59 @@ const mostrarPersonajes = (arr) => {
   }));
 };
 
-const ordenarDataLolAscendente = (arr) => {
-  return arr.map(obj => Object.assign({}, obj, {
-    splash: obj.splash,
-    name: obj.name,
-    title: obj.title,
-    info: obj.info,
-    tags: obj.tags,
-  })).sort();
-};
-
-const ordenarDataLolDescendente = (arr) => {
-  return arr.map(obj => Object.assign({}, obj, {
-    splash: obj.splash,
-    name: obj.name,
-    title: obj.title,
-    info: obj.info,
-    tags: obj.tags,
-  })).reverse();
-};
-const filtraDataTags = (arr) => {
-  return arr.map(obj => Object.assign({}, obj, {
-    splash: obj.splash,
-    name: obj.name,
-    title: obj.title,
-    info: obj.info,
-    tags: obj.tags,
-  })).filter((obj) => {
-    if (obj.tags === 'Tank') {
-      obj.tags;  
-    } else if (obj.tags === 'Fighter') {
-      obj.tags;
-    } else if (obj.tags === 'Assassin') {
-      obj.tags;
-    } else if (obj.tags === 'Mage') {
-      obj.tags;
-    } else if (obj.tags === 'Support') {
-      obj.tags;
-    } else if (obj.tags === 'Marksamn') {
-      obj.tags;
-    } else
-      obj.tags;
-  });
-};
-
-const filtrarPorBusqueda = (arr) => {
-  const buscarPorNombre = arr.reduce((acum, ele) => {
-    if (ele.name === name.value && ele.name !== '') {
-      acum = ele.name;
+const sortData = (data, sortBy, sortOrder) => {
+  let listChampionsOrder = [];
+  switch (sortOrder) {
+  case 'ascendente':
+    if (sortBy === 'name') {
+      listChampionsOrder = data.sort((nameA, nameB) => nameA.name > nameB.name ? 1 : -1);
+    } else {
+      listChampionsOrder = data.sort((ataqueA, ataqueB) => ataqueA.info.attack > ataqueB.info.attack ? 1 : -1);
     }
-    return acum;
-  }, {});
+    break;
+  case 'descendente':
+    if (sortBy === 'name') {
+      listChampionsOrder = data.sort((nameA, nameB) => nameA.name > nameB.name ? 1 : -1).reverse();
+    } else {
+      listChampionsOrder = data.sort((ataqueA, ataqueB) => ataqueA.info.attack > ataqueB.info.attack ? 1 : -1).reverse();
+    }
+    break;
+  }
+  return listChampionsOrder;
+};
+
+
+const filterData = (data, filterBy, condition) => {
+  let championTypeTags = [];
+  switch (filterBy) {
+  case 'Tags':
+    championTypeTags = data.filter(type => type.tags[0] === condition || type.tags[1] === condition);
+    break;
+  }
+  return championTypeTags;
+};
+
+const computeStats = (data) => {
+  let damageIncreased = data.map(obj => obj.stats.attackdamageperlevel - obj.stats.attackdamaga);
+  return damageIncreased;
+};
+
+const filtrarPorBusqueda = (data, value) => {
+  let buscarPorNombre = [];
+  switch (value) {
+  case 'name': 
+    buscarPorNombre = data.filter(champion => champion.name.index(0) === value.toUpperCase() || champion.name === value);
+    break;
+  default:
+    alert('Escriba el nombre del campeón que desea buscar');
+  }
   return buscarPorNombre;
-};
-
-const reduceMayorAtaque = (arr) => {
-  const campeonMasAtaque = arr.reduce((acum, ele) => {
-    if (ele.info.attack >= 9) {
-      acum = ele.info.attack;
-    }
-    return acum;
-  }, {});
-  return campeonMasAtaque;
 };
 
 window.dataL = {
   mostrarPersonajes,
-  ordenarDataLolAscendente,
-  ordenarDataLolDescendente,
-  filtraDataTags,
+  sortData,
+  filterData,
+  computeStats,
   filtrarPorBusqueda,
-  reduceMayorAtaque,
 };
