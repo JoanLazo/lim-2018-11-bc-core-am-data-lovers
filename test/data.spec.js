@@ -95,80 +95,80 @@ const output6 = [
   { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg', name: 'Diana', title: 'Scorn of the Moon', info: { attack: 7 } },
 ];
 
-describe('dataL', () => {
+describe('dataLol', () => {
   it('Deberia ser un objeto', () => {
-    expect(typeof dataL).toBe('object');
-    // console.log(dataL);
+    expect(typeof dataLol).toBe('object');
+    // console.log(dataLol);
   });
-  describe('dataL.mostrarPersonajes', () => {
+  describe('dataLol.newArrayLol', () => {
     it('deberia ser un funcion', () => {
-      expect(typeof dataL.mostrarPersonajes).toBe('function');
+      expect(typeof dataLol.newArrayLol).toBe('function');
     });
     it('deberia retornar un array de objetos, con los valores de las propiedades', () => {
-      expect(dataL.mostrarPersonajes(input)).toEqual(output1);
+      expect(dataLol.newArrayLol(input)).toEqual(output1);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.mostrarPersonajes(input)).toEqual(output1);
+      expect(dataLol.newArrayLol(input)).toEqual(output1);
     });
   });
 
-  describe('dataL.ordenarDataLolAscendente', () => {
+  describe('dataLol.sortData', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.ordenarDataLolAscendente).toBe('function');
+      expect(typeof dataLol.sortData).toBe('function');
     });
     it('deberia retornar de forma ascendente, de A-Z', () => {
-      expect(dataL.ordenarDataLolAscendente(input)).toEqual(output2);
+      expect(dataLol.sortData(input)).toEqual(output2);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.ordenarDataLolAscendente(input)).toEqual(output2);
+      expect(dataLol.sortData(input)).toEqual(output2);
     });
   });
 
-  describe('dataL.ordenarDataLolAscendente', () => {
+  describe('dataLol.sortData', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.ordenarDataLolAscendente).toBe('function');
+      expect(typeof dataLol.sortData).toBe('function');
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.ordenarDataLolAscendente(input)).toEqual(output2);
+      expect(dataLol.sortData(input)).toEqual(output2);
     });
     it('deberia retornar de forma descendente, de Z-A', () => {
-      expect(dataL.ordenarDataLolDescendente(input)).toEqual(output3);
+      expect(dataLol.sortData(input)).toEqual(output3);
     });
   });
 
-  describe('dataL.filtraDataTags', () => {
+  describe('dataLol.filterData', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.filtraDataTags).toBe('function');
+      expect(typeof dataLol.filterData).toBe('function');
     });
     it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
-      expect(dataL.filtraDataTags(output1)).not.toEqual(output4);
+      expect(dataLol.filterData(output1)).not.toEqual(output4);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.filtraDataTags(input)).not.toEqual(input);
+      expect(dataLol.filterData(input)).not.toEqual(input);
     });
   });
 
-  describe('dataL.filtrarPorBusqueda', () => {
+  describe('dataLol.filterBySearch', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.filtrarPorBusqueda).toBe('function');
+      expect(typeof dataLol.filterBySearch).toBe('function');
     });
     it('deberia retornar la carta con la información inicial; según el nombre del campeón puesto en búsqueda; ', () => {
-      expect(dataL.filtrarPorBusqueda(output1)).not.toEqual(output5);
+      expect(dataLol.filterBySearch(output1)).not.toEqual(output5);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.filtrarPorBusqueda(input)).not.toEqual(input);
+      expect(dataLol.filterBySearch(input)).not.toEqual(input);
     });
   });
 
-  describe('dataL.reduceMayorAtaque', () => {
+  describe('dataLol.computeStats', () => {
     it('deberia ser una funcion', () => {
-      expect(typeof dataL.reduceMayorAtaque).toBe('function');
+      expect(typeof dataLol.computeStats).toBe('function');
     });
     it('deberia retornar las cartas por información de ataque de manera descendente', () => {
-      expect(dataL.reduceMayorAtaque(output1)).not.toEqual(output6);
+      expect(dataLol.computeStats(output1)).not.toEqual(output6);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataL.reduceMayorAtaque(input)).not.toEqual(input);
+      expect(dataLol.computeStats(input)).not.toEqual(input);
     });
   });
 });
