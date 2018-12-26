@@ -191,4 +191,35 @@ btnSearch.addEventListener('click', () => {
   };
   crearCartasLol(championBySearch);
 });
-// Mostrando la nuevas cartas con los stas de daño
+// Mostrando la nuevas cartas con los stats de daño
+const selectStats = document.getElementById('stats-daño');
+selectStats.addEventListener('change', () => {
+  const selectBy = 'damage';
+  const ChampionByStatsDamage = dataLol.computeStats(arrLolEspecifico, selectBy);
+  const crearCartasLol = (data) => {
+    let templateListOfCards = '';
+    data.forEach((arrLolEspecifico) => {
+      const card = `
+      <div class="d-flex flex-wrap pt-5" id="contenedor-cartas">
+      <div class="row">
+      <div class="col-sm-3 py-2">
+              <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="${arrLolEspecifico.splash}"/>
+                      <div class="card-body" id="card-body">
+                        <h5 class="card-title" id="nombre">${arrLolEspecifico.name}</h5>
+                        <p class="card-sub-title" id="titulo">${arrLolEspecifico.title}</p>
+                        <p class="card-text"> Daño de ataque: ${arrLolEspecifico.stats.attackdamage}</p> 
+                        <p class="card-text">Daño de ataque por level: ${arrLolEspecifico.stats.attackdamageperlevel}</p>
+                        <p class="card-text">Daño de ataque total aumentado: ${arrLolEspecifico.stats.attackdamage - arrLolEspecifico.stats.attackdamageperlevel}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>     
+      `;
+      templateListOfCards += card;
+    });
+    containerCardTotal.innerHTML = templateListOfCards;
+  };
+  crearCartasLol(ChampionByStatsDamage);
+});

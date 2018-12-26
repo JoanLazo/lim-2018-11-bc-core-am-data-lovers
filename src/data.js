@@ -44,9 +44,14 @@ const filterData = (data, filterBy, condition) => {
   return championTypeTags;
 };
 
-const computeStats = (data) => {
-  const damageIncreased = data.map(obj => obj.stats.attackdamage - obj.stats.attackdamageperlevel);
-  return damageIncreased;
+const computeStats = (data, selectBy) => {
+  let totalIncreasedDamage = [];
+  switch (selectBy) {
+  case 'damage':
+    totalIncreasedDamage = data.filter(obj => obj.stats);
+    break;
+  }
+  return totalIncreasedDamage;
 };
 
 const filterBySearch = (data, input, value) => {
