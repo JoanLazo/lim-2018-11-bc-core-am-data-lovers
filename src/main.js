@@ -191,4 +191,4 @@ btnSearch.addEventListener('click', () => {
   };
   crearCartasLol(championBySearch);
 });
-// const buscarCampeonPorNombre = document.getElementById('buscar');
+// Mostrando la nuevas cartas con los stas de daño

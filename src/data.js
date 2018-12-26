@@ -45,7 +45,7 @@ const filterData = (data, filterBy, condition) => {
 };
 
 const computeStats = (data) => {
-  let damageIncreased = data.map(obj => obj.stats.attackdamage - obj.stats.attackdamageperlevel);
+  const damageIncreased = data.map(obj => obj.stats.attackdamage - obj.stats.attackdamageperlevel);
   return damageIncreased;
 };
 
@@ -53,7 +53,7 @@ const filterBySearch = (data, input, value) => {
   let searchByName = [];
   switch (input) {
   case 'value': 
-    searchByName = data.filter(champion => champion.name[0] === value.toUpperCase() || champion.name === value);
+    searchByName = data.filter(champion => champion.name === value.toLowerCase() || champion.name[0] === value.toUpperCase() || champion.name === value);
     break;
   default:
     alert('Escriba el nombre del campeón que desea buscar');
