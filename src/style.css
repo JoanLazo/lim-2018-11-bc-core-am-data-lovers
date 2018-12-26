@@ -94,3 +94,25 @@ body{
     font-size: 20px;
     border: 2px solid #937341;
 }
+.card-title , {
+   color: #0a0a0c; 
+}
+.card-sub-title{
+    color: #212122;
+}
+.card-text p{
+   color: #2f2f30;
+   padding: 0%;
+}
+.card-body{
+    color: inherit;
+}
+.card-img-top:hover{
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+}
+.card-body:hover .card-title{
+    transition: color 0.3s ease;
+    color: #b17008;
+    font-size: 25px;
+}

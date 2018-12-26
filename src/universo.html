@@ -41,26 +41,29 @@
   <nav class="navbar navbar-light bg-black-50">
     <form class="form-inline" action="javascript:void(0);" id="formulario">
       <select class="form-control mr-sm-2" name="ordenar" id="ordenar">
-        <option value="A-Z" id="ascendente">Ordenar de A - Z</option>
-        <option value="Z-A" id="descendente">Ordenar de Z - A</option>
+        <option>Ordenar</option>
+        <option value="name">Ordenar de A - Z</option>
+        <option value="name-rev">Ordenar de Z - A</option>
       </select>
 
       <select class="form-control mr-sm-2" name="filtro" id="filtro">
-        <option value="Tank" id="tank">Tank</option>
-        <option value="Fighter" id="fighter">Fighter</option>
-        <option value="Mage" id="mage">Mage</option>
-        <option value="Support" id="support">Support</option>
-        <option value="Assassin" id="assassin">Assassin</option>
-        <option value="Marksman" id="marksman">Marksman</option>
+        <option>Tipo</option>
+        <option value="Tank">Tank</option>
+        <option value="Fighter">Fighter</option>
+        <option value="Mage">Mage</option>
+        <option value="Support">Support</option>
+        <option value="Assassin">Assassin</option>
+        <option value="Marksman">Marksman</option>
       </select>
 
       <select class="form-control mr-sm-2" name="ataque" id="ataque">
-        <option value="+ Ataque" id="mayorAtque">+ Ataque</option>
-        <option value="- Ataque" id="menorAtaque">- Ataque</option>
+        <option>Ataque</option>
+        <option value="ataque-asc">- Ataque</option>
+        <option value="ataque-desc">+ Ataque</option>
       </select>
 
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="busqueda">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="buscar">Buscar</button>
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" id="btn-buscar">Buscar</button>
     </form>
   </nav>
 
