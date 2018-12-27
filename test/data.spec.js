@@ -19,6 +19,12 @@ const input = [
   },
 
 ];
+const input2 = [
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', attackdamage: 60.376, attackdamageperlevel: 3.2 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', attackdamage: 52, attackdamageperlevel: 3 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', attackdamage: 53.66, attackdamageperlevel: 2.18 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', attackdamage: 56, attackdamageperlevel: 5 },
+];
 
 const output1 = [
   {
@@ -75,12 +81,12 @@ const output3 = [
   },
 ];
 const output4 = [
-  
+
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
     name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage']
   },
-  
+
 ];
 const output5 = [
   {
@@ -89,10 +95,22 @@ const output5 = [
   },
 ];
 const output6 = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/MasterYi_0.jpg"', name: 'Master Yi', title: 'the Wuju Bladesman', info: { attack: 10 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Diana_0.jpg', name: 'Diana', title: 'Scorn of the Moon', info: { attack: 7 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, attackdamage: 60.376, attackdamageperlevel: 3.2 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, attackdamage: 52, attackdamageperlevel: 3 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, attackdamage: 53.66, attackdamageperlevel: 2.18 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, attackdamage: 56, attackdamageperlevel: 5 },
+];
+const output7 = [
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 } }
+];
+const output8 = [
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 } },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 } }
 ];
 
 describe('dataLol', () => {
@@ -117,22 +135,19 @@ describe('dataLol', () => {
       expect(typeof dataLol.sortData).toBe('function');
     });
     it('deberia retornar de forma ascendente, de A-Z', () => {
-      expect(dataLol.sortData(input)).toEqual(output2);
+      expect(dataLol.sortData(input, 'name', 'ascendente')).toEqual(output2);
+    });
+    it('deberia retornar d de forma ascendente, de A-Z', () => {
+      expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
+    });
+    it('deberia retornar de menos a mas ataque', () => {
+      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output7);
+    });
+    it('deberia retornar de mas a menos ataque', () => {
+      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output8);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.sortData(input)).toEqual(output2);
-    });
-  });
-
-  describe('dataLol.sortData', () => {
-    it('deberia ser una funcion', () => {
-      expect(typeof dataLol.sortData).toBe('function');
-    });
-    it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.sortData(input)).toEqual(output2);
-    });
-    it('deberia retornar de forma descendente, de Z-A', () => {
-      expect(dataLol.sortData(input)).toEqual(output3);
+      expect(dataLol.sortData(input)).not.toEqual(input);
     });
   });
 
@@ -141,7 +156,7 @@ describe('dataLol', () => {
       expect(typeof dataLol.filterData).toBe('function');
     });
     it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
-      expect(dataLol.filterData(output1)).not.toEqual(output4);
+      expect(dataLol.filterData(input, 'tags', 'Mage')).not.toEqual(output4);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.filterData(input)).not.toEqual(input);
@@ -153,7 +168,7 @@ describe('dataLol', () => {
       expect(typeof dataLol.filterBySearch).toBe('function');
     });
     it('deberia retornar la carta con la información inicial; según el nombre del campeón puesto en búsqueda; ', () => {
-      expect(dataLol.filterBySearch(output1)).not.toEqual(output5);
+      expect(dataLol.filterBySearch(input, 'value', 'Aatrox')).toEqual(output5);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.filterBySearch(input)).not.toEqual(input);
@@ -165,10 +180,7 @@ describe('dataLol', () => {
       expect(typeof dataLol.computeStats).toBe('function');
     });
     it('deberia retornar las cartas por información de ataque de manera descendente', () => {
-      expect(dataLol.computeStats(output1)).not.toEqual(output6);
-    });
-    it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.computeStats(input)).not.toEqual(input);
+      expect(dataLol.computeStats(input2, 'Aatrox', 'totalIncreasedDamage')).toEqual(output6);
     });
   });
 });
