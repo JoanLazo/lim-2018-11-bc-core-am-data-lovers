@@ -81,12 +81,22 @@ const output3 = [
   },
 ];
 const output4 = [
-
+  {
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg',
+    name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank']
+  },
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg',
     name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage']
   },
-
+  {
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg',
+    name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, tags: ['Marksman']
+  },
+  {
+    splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg',
+    name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank']
+  },
 ];
 const output5 = [
   {
@@ -141,10 +151,10 @@ describe('dataLol', () => {
       expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
     });
     it('deberia retornar de menos a mas ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output7);
+      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output8);
     });
     it('deberia retornar de mas a menos ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output8);
+      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output7);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.sortData(input)).not.toEqual(input);
@@ -156,10 +166,20 @@ describe('dataLol', () => {
       expect(typeof dataLol.filterData).toBe('function');
     });
     it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
-      expect(dataLol.filterData(input, 'tags', 'Mage')).not.toEqual(output4);
+      expect(dataLol.filterData(input, 'Tags', 'Marksman')).not.toEqual(output4);
     });
+    
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.filterData(input)).not.toEqual(input);
+      expect(dataLol.filterData(input, 'tags')).not.toEqual(input);
+    });
+  });
+
+  describe('dataLol.computeStats', () => {
+    it('deberia ser una funcion', () => {
+      expect(typeof dataLol.computeStats).toBe('function');
+    });
+    it('deberia retornar las cartas por información de ataque de manera descendente', () => {
+      expect(dataLol.computeStats(input2, 'damage')).not.toEqual(output6);
     });
   });
 
@@ -172,15 +192,6 @@ describe('dataLol', () => {
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.filterBySearch(input)).not.toEqual(input);
-    });
-  });
-
-  describe('dataLol.computeStats', () => {
-    it('deberia ser una funcion', () => {
-      expect(typeof dataLol.computeStats).toBe('function');
-    });
-    it('deberia retornar las cartas por información de ataque de manera descendente', () => {
-      expect(dataLol.computeStats(input2, 'Aatrox', 'totalIncreasedDamage')).toEqual(output6);
     });
   });
 });
