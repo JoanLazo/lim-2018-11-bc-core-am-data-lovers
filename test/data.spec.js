@@ -151,10 +151,10 @@ describe('dataLol', () => {
       expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
     });
     it('deberia retornar de menos a mas ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output7);
+      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output8);
     });
     it('deberia retornar de mas a menos ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output8);
+      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output7);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.sortData(input)).not.toEqual(input);
@@ -166,11 +166,11 @@ describe('dataLol', () => {
       expect(typeof dataLol.filterData).toBe('function');
     });
     it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
-      expect(dataLol.filterData(input, 'tags')).not.toEqual(output4);
+      expect(dataLol.filterData(input, 'Tags', 'Marksman')).not.toEqual(output4);
     });
     
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.filterData(input, 'Marksman')).not.toEqual(input);
+      expect(dataLol.filterData(input, 'tags')).not.toEqual(input);
     });
   });
 
