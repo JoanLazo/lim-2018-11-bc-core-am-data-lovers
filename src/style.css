@@ -56,13 +56,17 @@ body{
     text-decoration:#937341
 }
 .img-footer{
-    padding: 5%;
-    padding-left: 45%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 8%;
+    padding-left: 46%;
 }
 .lista-footer   {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     text-decoration-line: none;
     text-decoration: none;
     color: #f1e6d0;

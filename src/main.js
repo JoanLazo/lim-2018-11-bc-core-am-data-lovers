@@ -208,9 +208,9 @@ selectStats.addEventListener('change', () => {
                       <div class="card-body" id="card-body">
                         <h5 class="card-title" id="nombre">${arrLolEspecifico.name}</h5>
                         <p class="card-sub-title" id="titulo">${arrLolEspecifico.title}</p>
-                        <p class="card-text"> Daño de ataque: ${arrLolEspecifico.stats.attackdamage}</p> 
+                        <p class="card-text"> Daño de ataque total: ${arrLolEspecifico.stats.attackdamage}</p> 
                         <p class="card-text">Daño de ataque por level: ${arrLolEspecifico.stats.attackdamageperlevel}</p>
-                        <p class="card-text">Daño de ataque total aumentado: ${arrLolEspecifico.stats.attackdamage - arrLolEspecifico.stats.attackdamageperlevel}</p>
+                        <p class="card-text">Daño de ataque aumentado: ${arrLolEspecifico.stats.attackdamage - arrLolEspecifico.stats.attackdamageperlevel}</p>
                       </div>
                     </div>
                   </div>
