@@ -149,6 +149,21 @@ Ingresando al universo de los campeones :
 
 #### Testeos de usabilidad
 
+Nuestros usuarios nos comentaron sus ideas y molestias en el diseño para ser mejoradas las cuales mecionamos a continuación :
+
+* El tamaño de la letra deberia ser más grande.
+
+* El tipo de letra usado en el texto de color blanco debe ser diferente.
+
+* El diseño de las cartas y el tipo de letra deberia ser más llamativo.
+
+* Deberia haber más contenido en la página.
+
+* Al ingresar a universo me confunde dar click en el título.
+
+* En la parte de la cabecera Universo debe dirigirme a otra ventana.
+
+* El texto de inicio y universo en la cabecera debe ser más grande o en mayusculas.
 
 
 

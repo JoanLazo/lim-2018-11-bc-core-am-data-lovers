@@ -2,40 +2,53 @@ body{
     background-image: url(./imagenes/fondo3.jpg);
     background-size: 100vw 100vh;
     background-attachment: fixed;
-    margin: 0;
-    
+    margin: 0;   
 }
-
 #general{
     background-color: rgba(0, 0, 0, 0.603);
     font-family: 'Cardo', serif;
 }
+#logo-lol{
+    width: 30px;
+    height: 30px;
+}
 #imagen-inicio{
     image-orientation: center;
-    width: 100%;
-    
+    width: 100%;    
+}
+.img-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    image-orientation: inherit;
 }
 .separador{
     border: 5px solid #937341;
+    margin-bottom: 5%;
 }
-.cards{
-    font-family: 'Cardo', serif;
-    font-size: 20px;
-    color: #937341;
+.separador-1{
+    border: 5px solid #937341;
+    margin-top: 5%;
+    margin-bottom: 2%; 
 }
-
+.separador-2{
+    border: 5px solid #937341;
+    margin-top: 5%; 
+}
 .NOTICIAS{
     color: #937341;
     font-size: 20px;
     background-color:rgba(0, 0, 0, 0.671);
-    padding: 15px;
+    padding: 10px;
     border: 2px solid#937341; 
 }
 
 .texto-inicio{
     color: #f1e6d0;
     font-size: 23px;
-    padding: 15px;   
+    padding: 15px; 
+    font-family: 'Lato', sans-serif;  
 }
 
 .universo-titulo{
@@ -43,9 +56,13 @@ body{
     font-size: 35px;
     background-color: rgba(0, 0, 0, 0.603);
     padding: 15px;
-    border: 2px solid #937341;  
+    border: 2px solid #937341;
+    margin-bottom: 20px;  
 }
-
+iframe{
+    width: 560px;
+    height: 315px;
+}
 .links{
     text-decoration: none;
     color:#937341;
@@ -59,7 +76,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 8%;
+    padding: 3%;
     padding-left: 46%;
 }
 .lista-footer   {
@@ -77,39 +94,49 @@ body{
 .titulo-cards{
     text-align: center;
     padding: 3%;
-    color: #937341;
-    font-size: 35px;
+    color: #ffe2b3;
+    font-size: 30px;
     font-family: 'Cardo', serif;
 }
 .final-cards{
     padding-bottom: 5%;
 }
-
-#cards-total{
-    color: #0a0a0c;
-    font-size: 20px;
-    font-family: 'Cardo', serif;
+.card{
+ background-color: #0a0a0cbb;
+ border: 2px solid #937341;
 }
-
-#card-body{
-    background-color: #f1e6d0;
+.texto-ancla{
+    text-align: center;
 }
 #link-universo{
     font-size: 20px;
     border: 2px solid #937341;
+    background: #f0b802af;
 }
-.card-title , {
-   color: #0a0a0c; 
+#link-universo:hover{
+    transition: color 0.3s ease;
+    background: #03030385;
+}
+.card-title{
+   color: #a08651;
+   font-size: 25px; 
+   text-align: center;
 }
 .card-sub-title{
-    color: #212122;
+    color: #f1e6d0;
+    font-size: 20px;
+    text-align: center;
 }
 .card-text p{
    color: #2f2f30;
    padding: 0%;
 }
 .card-body{
-    color: inherit;
+    color: #f1e6d0;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    border: 1px solid #937341;
+    text-align: center;
 }
 .card-img-top:hover{
     transition: opacity 0.3s ease;
@@ -117,6 +144,6 @@ body{
 }
 .card-body:hover .card-title{
     transition: color 0.3s ease;
-    color: #b17008;
+    color: #937341;
     font-size: 25px;
 }
