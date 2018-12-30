@@ -60,8 +60,8 @@ body{
     margin-bottom: 20px;  
 }
 iframe{
-    width: 560px;
-    height: 315px;
+    width: 880px;
+    height: 515px;
 }
 .links{
     text-decoration: none;
@@ -147,3 +147,93 @@ iframe{
     color: #937341;
     font-size: 25px;
 }
+@media screen and (max-width:400px) and (min-width:320px){
+   iframe{
+    width: 300px;
+    height: 180px;
+   } 
+   .img-footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 80px;
+    width: 200px;
+    padding: 3%;
+    padding-left: 45%;
+    } 
+   .lista-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration-line: none;
+    text-decoration: none;
+    color: #f1e6d0;
+    padding-bottom: 30px; 
+    list-style: none;
+    font-size: 9px;
+    } 
+}
+@media screen and (max-width:450px) and (min-width:375px){
+    iframe{
+        width: 368px;
+        height: 220px;
+       }
+       .img-footer{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 80px;
+        width: 250px;
+        padding: 3%;
+        padding-left: 45%;
+        } 
+       .lista-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration-line: none;
+        text-decoration: none;
+        color: #f1e6d0;
+        padding-bottom: 30px; 
+        list-style: none;
+        font-size: 10px;
+        }     
+} 
+@media screen and (max-width:500px) and (min-width:451px){
+    iframe{
+        width: 430px;
+        height: 250px;
+       }
+       .lista-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        text-decoration-line: none;
+        text-decoration: none;
+        color: #f1e6d0;
+        padding-bottom: 30px; 
+        list-style: none;
+        font-size: 10px;
+        }   
+} 
+@media screen and (max-width:699px) and (min-width:501px){
+    iframe{
+        width: 490px;
+        height: 350px;
+       }  
+} 
+@media screen and (max-width:750px) and (min-width:700px){
+    iframe{
+        width: 680px;
+        height: 400px;
+       }  
+} 
+@media screen and (max-width:1024px) and (min-width:751px){
+    iframe{
+        width: 720px;
+        height: 450px;
+       } 
+} 
