@@ -138,13 +138,13 @@ En el diseño se aplicaron las ideas de los diseño de baja fidelidad :
 
 ![diseño-interfaz](https://4.bp.blogspot.com/-Dh3XHcPOmTY/XCVjS0U3Q1I/AAAAAAAAJ5Y/OieadKh1eJMrUzotDd5eLrz7t6XaD0UewCLcBGAs/s640/titulo-1.png)
 
-![diseño-interfaz](https://3.bp.blogspot.com/-5JHG8bN-TBg/XCVjaSjLwOI/AAAAAAAAJ5g/7kSY6qa6oCESADnw1Vf7apAsvSPhSZZ5QCLcBGAs/s640/univero-1.png)
+![diseño-interfaz](https://4.bp.blogspot.com/-WxSYuoWwVFo/XCu2vvNhkJI/AAAAAAAAJ-A/R6PGplOreSQqSCxBVB9zopWnXZ5tNdqfgCLcBGAs/s640/universo-2.png)
 
 ![diseño-interfaz](https://4.bp.blogspot.com/-VM6hmuUnGcE/XCVjasHib_I/AAAAAAAAJ5k/_rqun5H9I8g0EKkhonVsOGPjPfysdWMxQCEwYBhgL/s1600/footer-2.png)
 
 Ingresando al universo de los campeones :
 
-![diseño-interfaz](https://2.bp.blogspot.com/-SVnUKnMgjD0/XCVjZzsBmGI/AAAAAAAAJ5c/7pgu3_AGE6MyTAeeILrAABCh1USYjzARgCEwYBhgL/s1600/univero-2.png)
+![diseño-interfaz](https://3.bp.blogspot.com/-MaWhQMpbijs/XCu25z9MsVI/AAAAAAAAJ-E/k0DtMN0_ZF4fgmMJbiF8ZBZM9lQA78QqACLcBGAs/s640/cartas.png)
 
 
 #### Testeos de usabilidad
