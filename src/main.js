@@ -157,9 +157,11 @@ selectByType.addEventListener('change', () => {
 const btnSearch = document.getElementById('btn-buscar');
 btnSearch.addEventListener('click', () => {
   const inputSearch = document.getElementById('busqueda').value;
-  if (inputSearch === '' || inputSearch === ' ') {
-    alert('Escriba el nombre de un Campeón');
-  }
+  /* if (inputSearch === '' || inputSearch === ' ') {
+    //alert('Escriba el nombre de un Campeón');
+    let aaa = 0;
+    aaa = 1;
+  } */
   const inputValue = 'value';
   const championBySearch = dataLol.filterBySearch(arrLolEspecifico, inputValue, inputSearch);
   const crearCartasLol = (data) => {
@@ -191,11 +193,13 @@ btnSearch.addEventListener('click', () => {
   };
   crearCartasLol(championBySearch);
 });
-// Mostrando la nuevas cartas con los stats de daño
-const selectStats = document.getElementById('stats-daño');
+// Mostrando la nuevas cartas filtratas por tipo y con el promedio de ataque
+const selectStats = document.getElementById('stats-attack');
 selectStats.addEventListener('change', () => {
-  const selectBy = 'damage';
-  const ChampionByStatsDamage = dataLol.computeStats(arrLolEspecifico, selectBy);
+  const selectBy = 'attack-promedio';
+  // const attackAverageprom = arrLolEspecifico.info.attack * arrLolEspecifico.info.attack.lenght / arrLolEspecifico.info.attack.lenght;
+  // const attackAverage = selectStats.value;
+  const ChampionByStatsAttack = dataLol.computeStats(arrLolEspecifico, selectBy);
   const crearCartasLol = (data) => {
     let templateListOfCards = '';
     data.forEach((arrLolEspecifico) => {
@@ -208,9 +212,8 @@ selectStats.addEventListener('change', () => {
                       <div class="card-body" id="card-body">
                         <h5 class="card-title" id="nombre">${arrLolEspecifico.name}</h5>
                         <p class="card-sub-title" id="titulo">${arrLolEspecifico.title}</p>
-                        <p class="card-text"> Daño de ataque total: ${arrLolEspecifico.stats.attackdamage}</p> 
-                        <p class="card-text">Daño de ataque por level: ${arrLolEspecifico.stats.attackdamageperlevel}</p>
-                        <p class="card-text">Daño de ataque aumentado: ${arrLolEspecifico.stats.attackdamage - arrLolEspecifico.stats.attackdamageperlevel}</p>
+                        <p class="card-text"> Daño de ataque promedio: ${arrLolEspecifico.info.attack * arrLolEspecifico.info.attack.lenght / arrLolEspecifico.info.attack.lenght}</p> 
+                        
                       </div>
                     </div>
                   </div>
@@ -221,5 +224,5 @@ selectStats.addEventListener('change', () => {
     });
     containerCardTotal.innerHTML = templateListOfCards;
   };
-  crearCartasLol(ChampionByStatsDamage);
+  crearCartasLol(ChampionByStatsAttack);
 });

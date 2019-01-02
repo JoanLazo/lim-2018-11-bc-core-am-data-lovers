@@ -148,13 +148,13 @@ describe('dataLol', () => {
       expect(dataLol.sortData(input, 'name', 'ascendente')).toEqual(output2);
     });
     it('deberia retornar d de forma ascendente, de A-Z', () => {
-      expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
+      expect(dataLol.sortData(input, 'name', 'descendente')).toEqual(output3);
     });
     it('deberia retornar de menos a mas ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-asc', 'ascendente')).not.toEqual(output8);
+      expect(dataLol.sortData(input, 'ataque', 'ascendente')).not.toEqual(output8);
     });
     it('deberia retornar de mas a menos ataque', () => {
-      expect(dataLol.sortData(input, 'ataque-desc', 'descendente')).not.toEqual(output7);
+      expect(dataLol.sortData(input, 'ataque', 'descendente')).not.toEqual(output7);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.sortData(input)).not.toEqual(input);
@@ -179,7 +179,7 @@ describe('dataLol', () => {
       expect(typeof dataLol.computeStats).toBe('function');
     });
     it('deberia retornar las cartas por información de ataque de manera descendente', () => {
-      expect(dataLol.computeStats(input2, 'damage')).not.toEqual(output6);
+      expect(dataLol.computeStats(input2, 'attack', 'attack-promedio')).not.toEqual(output6);
     });
   });
 

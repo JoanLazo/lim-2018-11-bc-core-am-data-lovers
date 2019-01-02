@@ -23,7 +23,7 @@ const sortData = (data, sortBy, sortOrder) => {
     }
     break;
   case 'descendente':
-    if (sortBy === 'name-rev') {
+    if (sortBy === 'name') {
       listChampionsOrder = data.sort((nameA, nameB) => nameA.name > nameB.name ? 1 : -1).reverse();
     } else {
       listChampionsOrder = data.sort((ataqueA, ataqueB) => ataqueA.info.attack > ataqueB.info.attack ? 1 : -1).reverse();
@@ -44,14 +44,13 @@ const filterData = (data, filterBy, condition) => {
   return championTypeTags;
 };
 
-const computeStats = (data, selectBy) => {
-  let totalIncreasedDamage = [];
-  switch (selectBy) {
-  case 'damage':
-    totalIncreasedDamage = data.filter(obj => obj.stats);
-    break;
+const computeStats = (data) => { 
+  let attackAverageByType = [];
+  for (let i = 0 ; i < data.length ; i++) {
+    
+    attackAverageByType += data.info[0] + data.info[1] / data.info.length;
   }
-  return totalIncreasedDamage;
+  return attackAverageByType;
 };
 
 const filterBySearch = (data, input, value) => {
@@ -60,8 +59,6 @@ const filterBySearch = (data, input, value) => {
   case 'value': 
     searchByName = data.filter(champion => champion.name === value.toLowerCase() || champion.name[0] === value.toUpperCase() || champion.name === value);
     break;
-  default:
-    alert('Escriba el nombre del campeón que desea buscar');
   }
   return searchByName;
 };
