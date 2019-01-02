@@ -23,21 +23,21 @@ League of Legends es un juego en línea competitivo de ritmo frenético, que fus
 
 ## Resumen del Producto
 
-El proyecto es una aplicación web donde podras conocer sobre los campeones o heroes que tiene el juego para poder realizar las competencias, cada campeón tiene un nombre, caracteristicas y habilidades que lo diferencia de los demás el cual lo hace único.
-En la app podras ordenar por orden alfabético, tambien filtrar la imformación de los campeones por especialidad y realizar una busque por normbre.Además la app-web cuenta con una zona de las noticias donde podras visualizar sobre los temas del mes de diciembre.
+El proyecto es una aplicación web donde podrás conocer sobre los campeones o héroes que tiene el juego para poder realizar las competencias, cada campeón tiene un nombre, características y habilidades que lo diferencia de los demás el cual lo hace único.
+En la app podrás ordenar por orden alfabético, también filtrar la imformación de los campeones por especialidad y realizar una busqueda por nombre.Además la app-web cuenta con una zona de las noticias donde podrás visualizar sobre los temas del mes de diciembre-enero.
 
 ***
 ## Definición del producto
-  El producto es una plataforma informativa sobre los campeones del juego League of Legends que te permite mostrar, ordenar y filtrar información sobre los campeones de forma practica y amigable.
+  El producto es una plataforma informativa sobre los campeones del juego League of Legends que te permite mostrar, ordenar y filtrar información sobre los campeones de forma práctica y amigable.
 
 ***
 
 ## Problematica/Necesidad
-   Los usuarios jugadores de League of Leagues desean conocer a los campeones del juego de forma practica y amigable conociendo temas relevantes del juego para mejorar su experiencia en el juego.
+   Los usuarios jugadores de League of Leagues desean conocer a los campeones del juego de forma práctica y amigable conociendo temas relevantes del juego para mejorar su experiencia en el juego.
 ***
 
 ## Solución del Problema
-   Se creo una plataforma que permite conocer las noticias actuales del juego, conocer, mostrar, buscar y filtar información sobre los campiones de League of Legues de forma sencilla y amigable.
+   Se creó una plataforma que permite conocer las noticias actuales del juego, conocer, mostrar, buscar y filtar información sobre los campeones de League of Legues de forma sencilla y amigable.
 ***
 
 ## Proceso y decisiones de diseño
@@ -45,26 +45,26 @@ En la app podras ordenar por orden alfabético, tambien filtrar la imformación 
 ### Proceso
 
 * Se realizó un diseño de baja fidelidad.
-* Se realizó una investigacion sobre el contenido y referentes del juego [League of Legends](https://lan.leagueoflegends.com/es/).
-* Luego de tener la información de los usuarios se realizo el diseño con los estandares y referentes del juego.
+* Se realizó una investigación sobre el contenido y referentes del juego [League of Legends](https://lan.leagueoflegends.com/es/).
+* Luego de tener la información de los usuarios se realizó el diseño con los estándares y referentes del juego.
 
 ### Decisiones de diseño
- Para la creacion de esta aplicación web se tomaron las siguientes decisiones de diseño:
-*  Creación de una barra de navegacion con los colores relacionados al juego en cual se cologo un logo linkeable hacia la página oficial del juego. Los colores usados para la barra de navegacion fueron el fondo gris y las letras blancas.
+ Para la creación de esta aplicación web se tomaron las siguientes decisiones de diseño:
+*  Creación de una barra de navegación con los colores relacionados al juego en cual se colocó un logo linkeable hacia la página oficial del juego. Los colores usados para la barra de navegación fueron el fondo gris y las letras blancas.
 
 * Como vista principal se encuentra una imagen con el logo del juego junto a los campeones.
 
-* Para el contenido principal se coloco una cabecera con el titulo de Universo, esta cabecera se relaciona con los colores predominantes del juego, en el texto se coloco un boton que dirige al área de los campeones,tambien se agrego una imagen referente al tema.
+* Para el contenido principal se colocó una cabecera con el título de Universo, esta cabecera se relaciona con los colores predominantes del juego, en el texto se colocó un botón que dirige al área de los campeones,también se agregó una imagen referente al tema.
 
-* En el contenido se creo un carrusel de noticias con imagenes relacionadas a las noticias del mes.
+* En el contenido se creó un carrusel de noticias con imagenes relacionadas a las noticias del mes.
 
-* En la parte final se colocó la imagen que es representante del juego y unos links de apoyo para que el usuarios puedo conocer mas del juego o pueda jugar y descargar el juego ademas de link que nos lleva hacia una encuesta de aceptacion del propio juego.
+* En la parte final se colocó la imagen que es representante del juego y unos links de apoyo para que el usuarios pueda conocer más del juego o pueda jugar y descargar el juego además del link que nos lleva hacia una encuesta de aceptación del propio juego.
 
-* En la parte de los campeones mantiene la misma barra de navegación una sub barra para el filtro ,el orden,y la busqueda de los campeones.
+* En la parte de los campeones mantiene la misma barra de navegación una sub-barra para el filtro ,el orden,y la búsqueda de los campeones.
 
-* En el contenido de la zona de los campeones se muestra cada campeón en una carta con su imagen, nombre , título, informacion y el tipo de campeón que es.
+* En el contenido de la zona de los campeones se muestra cada campeón en una carta con su imagen, nombre , título, información y el tipo de campeón que es.
 
-## Usuarios y su relacion con el producto
+## Usuarios y su relación con el producto
 
 ### Historias de usuario
 
@@ -73,7 +73,7 @@ Para iniciar este proyecto realizamos una entrevista a nuestro usuario dirigido 
 En el transcurso del avance tuvimos muchos cambios, “siempre adaptándolo a la necesidad de nuestro usuario”; pudimos darnos cuenta de la importancia de aceptar las opiniones de los demás y que mejor de personas que hacen uso de este servicio de entretenimiento.
 
 Con respecto a la funcionalidad “trabajamos en ello”; AÚN no nos salen algunas cosas, pero estamos seguras que podremos afrontar nuestras dificultades (en equipo lo lograremos).
-Nuestra forma de ayudar al usuario de LOL(league of legends)fue poner las cosas necesarias, de manera ordenada y especifica para no tratar de confundir a nuestro querido usuario.
+Nuestra forma de ayudar al usuario de LOL(league of legends)fue poner las cosas necesarias, de manera ordenada y específica para no tratar de confundir a nuestro querido usuario.
 
 Comentarios de los usuarios:
 1.    Se ve bien, me gusta las imágenes empleadas en el fondo y es claro de entender; es muy interesante que me muestren sobre cada personaje porque así puedo saber  quienes conforman el juego.
@@ -86,46 +86,46 @@ Un punto en contra es que no haya un auto corrector por si te equivocas al escri
 4.    La suficiente información que necesito la puedo encontrar en este trabajo y me encanta como utilizaron los espacios (no sobra ni falta nada).
 
 ### Historias de Usuarios :
- - Como jugador de LOL me gustaria saber quienes son los heroes por medio de una imagen,su nombre e información para poder reconocerlos.
+ - Como jugador de LOL me gustaría saber quienes son los campeones por medio de una imagen,su nombre e información para poder reconocerlos.
 
- - Como jugador de LOL ne gustaría poder ordenar a los campeones en orden alfabetico para ubicarlo de una forma rapida.
+ - Como jugador de LOL ne gustaría poder ordenar a los campeones en orden alfabético para ubicarlo de una forma rápida.
 
- - Como jugador de LOL me gustaria ver las caracteristicas de los campeones, para asi poder conocer quien es el mejor según sus puntajes.
+ - Como jugador de LOL me gustaría ver las características de los campeones, para así poder conocer quien es el mejor según sus puntajes.
 
-- Como jugador de LOL me gustaria poder filtar los campeones por tipo, para conocer cual es la habilidad de cada uno.
+- Como jugador de LOL me gustaría poder filtar los campeones por tipo, para conocer cual es la habilidad de cada uno.
 
- - Como jugador de LOL me gustaria ver las noticias recientes del juego, para estar informado.
+ - Como jugador de LOL me gustaría ver las noticias recientes del juego, para estar informado.
 
- - Como jugador de LOL me gustaria ver videos sobre el uso de los campeones para saber como mejorar mi jugada.
+ - Como jugador de LOL me gustaría ver videos sobre el uso de los campeones para saber como mejorar mi jugada.
 
- - Como jugador de LOL me gustaria conocer la historia de cada campeon para asi conocer el porque de sus habilidades y su forma.
+ - Como jugador de LOL me gustaría conocer la historia de cada campeón para así conocer el porque de sus habilidades y su forma.
  
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Diseño de baja fidelidad Numero 1 :
+Diseño de baja fidelidad Número 1 :
 
-Este es el diseño base que realizamos para el diseño de la aplicación web de LOL.
-Al cual realizamos cambios segun los comentarios de nuestros usuarios y el feedback de los coaches.
-Basando el diseño en la funcionalidad avacando menos temas y siendo mas simple.
+Este es el diseño base que realizamos para la aplicación web de LOL.
+Al cual realizamos cambios según los comentarios de nuestros usuarios y el feedback de los coaches.
+Basando el diseño en la funcionalidad abarcando menos temas y siendo más simple.
 
 ![diseño0](https://1.bp.blogspot.com/-vwpn7MhKv4I/XBZq24W5wZI/AAAAAAAAJvs/9UvNRbh36c8YNcyARlhQC_psF3aIWBTJQCLcBGAs/s640/iteracion1.jpg)
 
 Iteración n°1 del diseño de baja fidelidad:
 
-Este diseño se concentraba más en mostrar contenido de la data referente a los campeones del juego sin embargo no cumplia con la funciones, además para el usuario era confuso ver varias pestanas de la informacion de los campeones, por ellos se decidio cambiar el diseño y seguir iterando.
+Este diseño se concentraba más en mostrar contenido de la data referente a los campeones del juego sin embargo no cumplía con la funciones, además para el usuario era confuso ver varias pestañas de la información de los campeones, por ellos se decidió cambiar el diseño y seguir iterando.
 
-![iteracion1](https://3.bp.blogspot.com/--HZP9DoIUL8/XBZq-B92z6I/AAAAAAAAJvw/zM7l9GeCWRALl2GkDpq9mMHwUa2J_IhIgCLcBGAs/s640/iteraci%25C3%25B3n2.jpg)
+![iteración1](https://3.bp.blogspot.com/--HZP9DoIUL8/XBZq-B92z6I/AAAAAAAAJvw/zM7l9GeCWRALl2GkDpq9mMHwUa2J_IhIgCLcBGAs/s640/iteraci%25C3%25B3n2.jpg)
 
 Iteración n°2 del diseño de baja fidelidad:
 
-En este diseño se aplicaron modificaciones en la navegacion agregando un logo al lado izquierdo, se agrego un pie de pagina con links referentes al juego, en la seccion del universo de los campeones se agrego funcionalidad de orden y de filtro mostrando los heroes en cartas con imagendes y con su nombre y título.
+En este diseño se aplicaron modificaciones en la navegación agregando un logo al lado izquierdo, se agregó un pie de página con links referentes al juego, en la sección del universo de los campeones se agregó funcionalidad de orden y de filtro mostrando los campeones en cartas con imágenes, con su nombre y título.
 
-![iteracion2](https://4.bp.blogspot.com/-XiY8g-ylzpY/XBZrOLGmGwI/AAAAAAAAJv8/9uBeMd2NemYQzp0dQDRjD9faG0CHaSNdwCLcBGAs/s640/iteracion3-1%2B%25281%2529.jpg)
+![iteración2](https://4.bp.blogspot.com/-XiY8g-ylzpY/XBZrOLGmGwI/AAAAAAAAJv8/9uBeMd2NemYQzp0dQDRjD9faG0CHaSNdwCLcBGAs/s640/iteracion3-1%2B%25281%2529.jpg)
 
-![iteracion2-2](https://2.bp.blogspot.com/-ZhNP7rE5y-U/XBZrQVaDepI/AAAAAAAAJwA/qyG8jNRdrX0wbS3JpF4K8fxSdH1loec7ACLcBGAs/s640/iteracion3-2.jpg)
+![iteración2-2](https://2.bp.blogspot.com/-ZhNP7rE5y-U/XBZrQVaDepI/AAAAAAAAJwA/qyG8jNRdrX0wbS3JpF4K8fxSdH1loec7ACLcBGAs/s640/iteracion3-2.jpg)
 
 #### Prototipo de alta fidelidad
 
@@ -155,15 +155,15 @@ Nuestros usuarios nos comentaron sus ideas y molestias en el diseño para ser me
 
 * El tipo de letra usado en el texto de color blanco debe ser diferente.
 
-* El diseño de las cartas y el tipo de letra deberia ser más llamativo.
+* El diseño de las cartas y el tipo de letra debería ser más llamativo.
 
-* Deberia haber más contenido en la página.
+* Debería haber más contenido en la página.
 
 * Al ingresar a universo me confunde dar click en el título.
 
 * En la parte de la cabecera Universo debe dirigirme a otra ventana.
 
-* El texto de inicio y universo en la cabecera debe ser más grande o en mayusculas.
+* El texto de inicio y universo en la cabecera debe ser más grande o en mayúsculas.
 
 
 
