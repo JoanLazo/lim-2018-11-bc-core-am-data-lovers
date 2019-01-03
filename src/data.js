@@ -35,21 +35,22 @@ const sortData = (data, sortBy, sortOrder) => {
 
 
 const filterData = (data, filterBy, condition) => {
-  let championTypeTags = [];
+  let championFilter = [];
   switch (filterBy) {
   case 'Tags':
-    championTypeTags = data.filter(type => type.tags[0] === condition || type.tags[1] === condition);
+    championFilter = data.filter(type => type.tags[0] === condition || type.tags[1] === condition);
+    break;
+  case 'attack': 
+    championFilter = data.filter(obj => obj.stats && condition);
     break;
   }
-  return championTypeTags;
+  return championFilter;
 };
 
 const computeStats = (data) => { 
-  let attackAverageByType = [];
-  for (let i = 0 ; i < data.length ; i++) {
-    attackAverageByType += data.info[i] + data.info[1] / data.info.length;
-  }
-  return attackAverageByType;
+  let increasedAttack = [];
+  increasedAttack = data.map(obj => ((Math.round(obj.stats.attackdamageperlevel) * 25) + Math.round(obj.stats.attackdamage)));
+  return increasedAttack;
 };
 
 const filterBySearch = (data, input, value) => {
