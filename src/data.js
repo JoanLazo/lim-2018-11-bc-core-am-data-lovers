@@ -49,7 +49,9 @@ const filterData = (data, filterBy, condition) => {
 
 const computeStats = (data) => { 
   let increasedAttack = [];
-  increasedAttack = data.map(obj => ((Math.round(obj.stats.attackdamageperlevel) * 25) + Math.round(obj.stats.attackdamage)));
+  // let attackByOne = [];
+  increasedAttack = data.map((obj) => Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage));
+  // attackByOne = data.forEach(increasedAttack);
   return increasedAttack;
 };
 
