@@ -175,11 +175,11 @@ describe('dataLol', () => {
   });
 
   describe('dataLol.computeStats', () => {
-    it('deberia ser una funcion', () => {
+    it('deberia ser una funcion que me da un número de su nivel escalable', () => {
       expect(typeof dataLol.computeStats).toBe('function');
     });
-    it('deberia retornar las cartas por información de ataque de manera descendente', () => {
-      expect(dataLol.computeStats(input2, 'attack', 'attack-promedio')).not.toEqual(output6);
+    it('deberia retornar las cartas por promedio obtenido de los ataques realizados', () => {
+      expect(dataLol.computeStats(input2)).toEqual(output6);
     });
   });
 
