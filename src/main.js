@@ -31,7 +31,7 @@ const crearCartasLol = (data) => {
   containerCardTotal.innerHTML = templateListOfCards;
 };
 crearCartasLol(arrLolEspecifico);
-// Ordenando las cartas de forma ascendente y descendente segun el nombre
+// Ordenando las cartas por el nombre de forma ascendente y descendente segun el nombre
 const selectOrder = document.getElementById('ordenar');
 selectOrder.addEventListener('change', () => {
   const sortByname = selectOrder.value;
@@ -74,7 +74,7 @@ selectOrder.addEventListener('change', () => {
   };
   crearCartasLol(nameOrderAsc);
 });
-// Ordenando las cartas de forma ascendente y descendente segun el ataque
+// Ordenando las cartas por el ataque de forma ascendente y descendente segun el ataque
 const selectOrderAttack = document.getElementById('ataque');
 selectOrderAttack.addEventListener('change', () => {
   const sortByname = selectOrderAttack.value;
@@ -152,15 +152,12 @@ selectByType.addEventListener('change', () => {
   };
   crearCartasLol(championByType);
 });
-// Mostrando los heroes por busqueda 
-
+// Mostrando los campeones por busqueda , buscar por inicial y por el nombre completo
 const btnSearch = document.getElementById('btn-buscar');
 btnSearch.addEventListener('click', () => {
   const inputSearch = document.getElementById('busqueda').value;
   /* if (inputSearch === '' || inputSearch === ' ') {
-    //alert('Escriba el nombre de un Campeón');
-    let aaa = 0;
-    aaa = 1;
+    //alert('Escriba el nombre de un Campeón')
   } */
   const inputValue = 'value';
   const championBySearch = dataLol.filterBySearch(arrLolEspecifico, inputValue, inputSearch);
@@ -193,13 +190,19 @@ btnSearch.addEventListener('click', () => {
   };
   crearCartasLol(championBySearch);
 });
-// Mostrando la nuevas cartas filtratas por tipo y con el promedio de ataque
-const selectStats = document.getElementById('stats-attack').selectedIndex = '1';
+// Mostrando las cartas filtratas por stats y mostrando el ataque daño aumentado total
+const selectStats = document.getElementById('stats-attack');
 selectStats.addEventListener('change', () => {
-  const ChampionByStatsAttack = dataLol.computeStats(arrLolEspecifico);
+  const championTypeValue = selectStats.value;
+  const filterBy = 'attack';
+  const championByType = dataLol.filterData(arrLolEspecifico, filterBy, championTypeValue);
+  const championByStatsAttack = dataLol.computeStats(arrLolEspecifico);
+  // const attackForEachChampion = (data) => {
+  //   data.forEach((obj) => obj);
+  // };
   const crearCartasLol = (data) => {
     let templateListOfCards = '';
-    data.forEach((arrLolEspecifico) => {
+    data.forEach((arrLolEspecifico) => {  
       const card = `
       <div class="d-flex flex-wrap pt-5" id="contenedor-cartas">
       <div class="row">
@@ -211,7 +214,7 @@ selectStats.addEventListener('change', () => {
                         <p class="card-sub-title" id="titulo">${arrLolEspecifico.title}</p>
                         <p class="card-text"> Daño de ataque: ${arrLolEspecifico.stats.attackdamage}</p>
                         <p class="card-text"> Daño de ataque por level: ${arrLolEspecifico.stats.attackdamageperlevel}</p>
-                        <p class="card-text"> Daño de ataque aumentado total: ${ChampionByStatsAttack}</p> 
+                        <p class="card-text"> Daño de ataque aumentado total: ${championByStatsAttack[0]}</p> 
                       </div>
                     </div>
                   </div>
@@ -222,5 +225,5 @@ selectStats.addEventListener('change', () => {
     });
     containerCardTotal.innerHTML = templateListOfCards;
   };
-  crearCartasLol(arrLolEspecifico);
+  crearCartasLol(championByType);
 });
