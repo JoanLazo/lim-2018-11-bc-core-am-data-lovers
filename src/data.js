@@ -47,8 +47,7 @@ const filterData = (data, filterBy, condition) => {
 const computeStats = (data) => { 
   let attackAverageByType = [];
   for (let i = 0 ; i < data.length ; i++) {
-    
-    attackAverageByType += data.info[0] + data.info[1] / data.info.length;
+    attackAverageByType += data.info[i] + data.info[1] / data.info.length;
   }
   return attackAverageByType;
 };
