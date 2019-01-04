@@ -197,11 +197,11 @@ selectStats.addEventListener('change', () => {
   const filterBy = 'attack';
   const championByType = dataLol.filterData(arrLolEspecifico, filterBy, championTypeValue);
   const championByStatsAttack = dataLol.computeStats(arrLolEspecifico);
-  const crearValorAttack = (data) => {
-    let resultado = [];
-    data.forEach((ele) => resultado = ele);
-    return resultado;
-  };
+  // const crearValorAttack = (data) => {
+  //   let resultado = [];
+  //   data.forEach((ele) => resultado = ele);
+  //   return resultado;
+  // };
   const crearCartasLol = (data) => {
     let templateListOfCards = '';
     data.forEach((arrLolEspecifico) => {  
@@ -216,7 +216,7 @@ selectStats.addEventListener('change', () => {
                         <p class="card-sub-title" id="titulo">${arrLolEspecifico.title}</p>
                         <p class="card-text"> Daño de ataque: ${arrLolEspecifico.stats.attackdamage}</p>
                         <p class="card-text"> Daño de ataque por level: ${arrLolEspecifico.stats.attackdamageperlevel}</p>
-                        <p class="card-text"> Daño de ataque aumentado total: ${crearValorAttack(championByStatsAttack)}</p> 
+                        <p class="card-text"> Daño de ataque aumentado total: ${championByStatsAttack}</p> 
                       </div>
                     </div>
                   </div>
