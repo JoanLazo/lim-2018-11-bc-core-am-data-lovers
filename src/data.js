@@ -8,7 +8,7 @@ const newArrayLol = (arr) => {
     splash: obj.splash,
     info: obj.info,
     tags: obj.tags,
-    stats: obj.stats,
+    stats: obj.stats
   }));
 };
 
@@ -40,25 +40,33 @@ const filterData = (data, filterBy, condition) => {
   case 'Tags':
     championFilter = data.filter(type => type.tags[0] === condition || type.tags[1] === condition);
     break;
-  case 'attack': 
+  case 'attack':
     championFilter = data.filter(obj => obj.stats && condition);
     break;
   }
   return championFilter;
 };
 
-const computeStats = (data) => { 
+const computeStats = (data) => {
   let increasedAttack = [];
   // let elementAttack = [];
-  increasedAttack = data.map((obj) => Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage));
-  // increasedAttack.forEach((ele) => elementAttack = ele);
+  increasedAttack = data.map((obj) => Object.assign({}, 
+    obj, {
+      name: obj.name,
+      title: obj.title,
+      splash: obj.splash,
+      info: obj.info,
+      tags: obj.tags,
+      stats: obj.stats,
+      elementAttack: Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage)
+    }));
   return increasedAttack;
 };
 
 const filterBySearch = (data, input, value) => {
   let searchByName = [];
   switch (input) {
-  case 'value': 
+  case 'value':
     searchByName = data.filter(champion => champion.name === value.toLowerCase() || champion.name[0] === value.toUpperCase() || champion.name === value);
     break;
   }
