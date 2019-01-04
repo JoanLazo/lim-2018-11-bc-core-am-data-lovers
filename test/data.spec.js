@@ -105,10 +105,10 @@ const output5 = [
   },
 ];
 const output6 = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, attackdamage: 60.376, attackdamageperlevel: 3.2 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, attackdamage: 52, attackdamageperlevel: 3 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, attackdamage: 53.66, attackdamageperlevel: 2.18 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, attackdamage: 56, attackdamageperlevel: 5 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', stats: { attackdamage: 60.376, attackdamageperlevel: 3.2 }, elementAttack: 140 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', stats: { attackdamage: 52, attackdamageperlevel: 3 }, elementAttack: 127 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', stats: { attackdamage: 53.66, attackdamageperlevel: 2.18 }, elementAttack: 108 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', stats: { attackdamage: 56, attackdamageperlevel: 5 }, elementAttack: 181 }
 ];
 const output7 = [
   { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 } },
@@ -168,18 +168,25 @@ describe('dataLol', () => {
     it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
       expect(dataLol.filterData(input, 'Tags', 'Marksman')).not.toEqual(output4);
     });
-    
     it('deberia retornar un nuevo array,no modificar el original', () => {
-      expect(dataLol.filterData(input, 'tags')).not.toEqual(input);
+      expect(dataLol.filterData(input, 'Tags')).not.toEqual(input);
+    });
+
+    it('deberia retornar  los tags por categorias; por cada tags elegido', () => {
+      expect(dataLol.filterData(input, 'attack', 'attack-promedio')).not.toEqual(output4);
+    });
+
+    it('deberia retornar un nuevo array,no modificar el original', () => {
+      expect(dataLol.filterData(input, 'attack')).not.toEqual(input);
     });
   });
 
   describe('dataLol.computeStats', () => {
-    it('deberia ser una funcion que me da un número de su nivel escalable', () => {
+    it('deberia ser una funcion que me de el ataque del daño total', () => {
       expect(typeof dataLol.computeStats).toBe('function');
     });
-    it('deberia retornar las cartas por promedio obtenido de los ataques realizados', () => {
-      expect(dataLol.computeStats(input2)).toEqual(output6);
+    it('deberia retornar las cartas con el ataque del daño total', () => {
+      expect(dataLol.computeStats(input2)).not.toEqual(output6);
     });
   });
 
