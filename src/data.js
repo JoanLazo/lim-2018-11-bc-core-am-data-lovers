@@ -50,7 +50,7 @@ const filterData = (data, filterBy, condition) => {
 const computeStats = (data) => {
   let increasedAttack = [];
   // let elementAttack = [];
-  increasedAttack = data.map((obj) => Object.assign({}, 
+  increasedAttack = data.map((obj) => Object.assign({},
     obj, {
       name: obj.name,
       title: obj.title,
