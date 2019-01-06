@@ -23,12 +23,12 @@ League of Legends es un juego en línea competitivo de ritmo frenético, que fus
 
 ## Resumen del Producto
 
-El proyecto es una aplicación web donde podrás conocer sobre los campeones o héroes que tiene el juego para poder realizar las competencias, cada campeón tiene un nombre, características y habilidades que lo diferencia de los demás el cual lo hace único.
-En la app podrás ordenar por orden alfabético, también filtrar la imformación de los campeones por especialidad y realizar una busqueda por nombre.Además la app-web cuenta con una zona de las noticias donde podrás visualizar sobre los temas del mes de diciembre-enero.
+El proyecto es una página web donde podrás conocer sobre diferentes temas sobre el juego League of Leagues, como tema principal el universo de los campeones que tiene el juego para poder realizar las competencias, cada campeón tiene un nombre, características y habilidades que lo diferencia de los demás el cual lo hace único.
+En la página podrás ordenar por orden alfabético, también filtrar la imformación de los campeones por especialidad y realizar una busqueda por nombre.Además la web cuenta con una zona de las noticias donde podrás visualizar sobre los temas del mes de diciembre-enero y ver videos de aficionados al juego.
 
 ***
 ## Definición del producto
-  El producto es una plataforma informativa sobre los campeones del juego League of Legends que te permite mostrar, ordenar y filtrar información sobre los campeones de forma práctica y amigable.
+  El producto es una página web informativa sobre los campeones del juego League of Legends que te permite mostrar, ordenar , filtrar, ver estadisticas y buscar por nombre según la información sobre los campeones de forma práctica y amigable.
 
 ***
 
@@ -37,7 +37,7 @@ En la app podrás ordenar por orden alfabético, también filtrar la imformació
 ***
 
 ## Solución del Problema
-   Se creó una plataforma que permite conocer las noticias actuales del juego, conocer, mostrar, buscar y filtar información sobre los campeones de League of Legues de forma sencilla y amigable.
+   Se creó una página web que permite conocer, mostrar, buscar y filtar información sobre los campeones de League of Legues de forma sencilla y amigable, además de ver noticias actuales y videos relacionados al juego.
 ***
 
 ## Proceso y decisiones de diseño
@@ -149,7 +149,7 @@ Ingresando al universo de los campeones :
 
 #### Testeos de usabilidad
 
-Nuestros usuarios nos comentaron sus ideas y molestias en el diseño para ser mejoradas las cuales mecionamos a continuación :
+Nuestros usuarios nos comentaron sus ideas y molestias en el diseño para ser mejoradas las cuales mencionamos a continuación :
 
 * El tamaño de la letra deberia ser más grande.
 
