@@ -59,7 +59,9 @@ const computeStats = (data) => {
       tags: obj.tags,
       stats: obj.stats,
       elementAttack: Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage)
+
     }));
+    
   return increasedAttack;
 };
 
