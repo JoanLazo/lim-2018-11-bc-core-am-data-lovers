@@ -197,11 +197,6 @@ selectStats.addEventListener('change', () => {
   const filterBy = 'attack';
   const championByType = dataLol.filterData(arrLolEspecifico, filterBy, championTypeValue);
   const championByStatsAttack = dataLol.computeStats(championByType);
-  // const crearValorAttack = (data) => {
-  //   let resultado = [];
-  //   data.forEach((ele) => resultado = ele);
-  //   return resultado;
-  // };
   const crearCartasLol = (data) => {
     let templateListOfCards = '';
     data.forEach((arrLolEspecifico) => {  

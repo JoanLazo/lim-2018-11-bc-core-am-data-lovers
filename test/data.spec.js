@@ -148,7 +148,7 @@ describe('dataLol', () => {
       expect(dataLol.sortData(input, 'name', 'ascendente')).toEqual(output2);
     });
     it('deberia retornar d de forma ascendente, de A-Z', () => {
-      expect(dataLol.sortData(input, 'name', 'descendente')).toEqual(output3);
+      expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
     });
     it('deberia retornar de menos a mas ataque', () => {
       expect(dataLol.sortData(input, 'ataque', 'ascendente')).not.toEqual(output8);
