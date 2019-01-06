@@ -23,7 +23,7 @@ const sortData = (data, sortBy, sortOrder) => {
     }
     break;
   case 'descendente':
-    if (sortBy === 'name') {
+    if (sortBy === 'name-rev') {
       listChampionsOrder = data.sort((nameA, nameB) => nameA.name > nameB.name ? 1 : -1).reverse();
     } else {
       listChampionsOrder = data.sort((ataqueA, ataqueB) => ataqueA.info.attack > ataqueB.info.attack ? 1 : -1).reverse();
@@ -49,15 +49,8 @@ const filterData = (data, filterBy, condition) => {
 
 const computeStats = (data) => {
   let increasedAttack = [];
-  // let elementAttack = [];
   increasedAttack = data.map((obj) => Object.assign({},
     obj, {
-      name: obj.name,
-      title: obj.title,
-      splash: obj.splash,
-      info: obj.info,
-      tags: obj.tags,
-      stats: obj.stats,
       elementAttack: Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage)
     }));
   return increasedAttack;
