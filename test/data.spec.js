@@ -16,14 +16,14 @@ const input = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg',
     name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank']
-  },
+  }
 
 ];
 const input2 = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', attackdamage: 60.376, attackdamageperlevel: 3.2 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', attackdamage: 52, attackdamageperlevel: 3 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', attackdamage: 53.66, attackdamageperlevel: 2.18 },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', attackdamage: 56, attackdamageperlevel: 5 },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank'], stats: {attackdamage: 60.376, attackdamageperlevel: 3.2 }},
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage'], stats: {attackdamage: 52, attackdamageperlevel: 3 }},
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, tags: ['Marksman'], stats: {attackdamage: 53.66, attackdamageperlevel: 2.18 }},
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank'], stats: {attackdamage: 56, attackdamageperlevel: 5 }}
 ];
 
 const output1 = [
@@ -42,7 +42,7 @@ const output1 = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg',
     name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank']
-  },
+  }
 ];
 const output2 = [
   {
@@ -60,7 +60,7 @@ const output2 = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg',
     name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank']
-  },
+  }
 ];
 const output3 = [
   {
@@ -78,7 +78,7 @@ const output3 = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg',
     name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank']
-  },
+  }
 ];
 const output4 = [
   {
@@ -96,13 +96,13 @@ const output4 = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg',
     name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank']
-  },
+  }
 ];
 const output5 = [
   {
     splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg',
     name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank']
-  },
+  }
 ];
 const output6 = [
   { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', stats: { attackdamage: 60.376, attackdamageperlevel: 3.2 }, elementAttack: 140 },
@@ -111,16 +111,16 @@ const output6 = [
   { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', stats: { attackdamage: 56, attackdamageperlevel: 5 }, elementAttack: 181 }
 ];
 const output7 = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 } }
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, tags: ['Marksman'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage'] }
 ];
 const output8 = [
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 } },
-  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 } }
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Bard_0.jpg', name: 'Bard', title: 'the Wandering Caretaker', info: { attack: 4, defense: 4, magic: 5, difficulty: 9 }, tags: ['Support', 'Mage'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg', name: 'Caitlyn', title: 'the Sheriff of Piltover', info: { attack: 8, defense: 2, magic: 2, difficulty: 6 }, tags: ['Marksman'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg', name: 'Aatrox', title: 'the Darkin Blade', info: { attack: 8, defense: 4, magic: 3, difficulty: 4 }, tags: ['Fighter', 'Tank'] },
+  { splash: 'http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Darius_0.jpg', name: 'Darius', title: 'the Hand of Noxus', info: { attack: 9, defense: 5, magic: 1, difficulty: 2 }, tags: ['Fighter', 'Tank'] }
 ];
 
 describe('dataLol', () => {
@@ -151,10 +151,10 @@ describe('dataLol', () => {
       expect(dataLol.sortData(input, 'name-rev', 'descendente')).toEqual(output3);
     });
     it('deberia retornar de menos a mas ataque', () => {
-      expect(dataLol.sortData(input, 'ataque', 'ascendente')).not.toEqual(output8);
+      expect(dataLol.sortData(input, 'ataque', 'ascendente')).toEqual(output8);
     });
     it('deberia retornar de mas a menos ataque', () => {
-      expect(dataLol.sortData(input, 'ataque', 'descendente')).not.toEqual(output7);
+      expect(dataLol.sortData(input, 'ataque', 'descendente')).toEqual(output7);
     });
     it('deberia retornar un nuevo array,no modificar el original', () => {
       expect(dataLol.sortData(input)).not.toEqual(input);

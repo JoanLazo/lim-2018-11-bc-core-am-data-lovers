@@ -52,7 +52,9 @@ const computeStats = (data) => {
   increasedAttack = data.map((obj) => Object.assign({},
     obj, {
       elementAttack: Math.round((obj.stats.attackdamageperlevel * 25) + obj.stats.attackdamage)
+
     }));
+    
   return increasedAttack;
 };
 
