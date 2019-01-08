@@ -135,7 +135,8 @@ En este diseño se aplicaron modificaciones en la navegación agregando un logo 
 
 #### Prototipo de alta fidelidad
 
-En el diseño se aplicaron las ideas de los diseño de baja fidelidad :
+En el diseño se aplicaron las ideas de los diseño de baja fidelidad/link hacia Figma:
+ - https://www.figma.com/file/HZw4HYBNFIxHt3iOHXTxPY7h/CAMPEONES-LEAGUE-OF-LEGENDS?node-id=0%3A1
 
 ##### Diseño exportado en Zeplin :
  - https://zpl.io/V1zZJOJ
