@@ -5,10 +5,10 @@
 * [Preámbulo](#preámbulo)
 * [Descripción](#resumen-del-producto)
 * [Definición del producto](#definición-del-producto)
-* [Problemática/Necesidad](#problematica-/-necesidad)
-* [Solución del problema](#solucion-del-problema)
+* [Problemática/Necesidad](#problemática)
+* [Solución del problema](#solución-del-problema)
 * [Proceso y decisiones de diseño](#proceso-y-decisiones-de-diseño)
-* [Usuarios y su relación con el producto](#usuarios-y-su-relacion-con-el-producto)
+* [Usuarios y su relación con el producto](#usuarios-y-su-relación-con-el-producto)
 
 
 ***
@@ -32,7 +32,7 @@ En la página podrás ordenar por orden alfabético, también filtrar la imforma
 
 ***
 
-## Problematica/Necesidad
+## Problemática / Necesidad
    Los usuarios jugadores de League of Leagues desean conocer a los campeones del juego de forma práctica y amigable conociendo temas relevantes del juego para mejorar su experiencia en el juego.
 ***
 
@@ -64,6 +64,10 @@ En la página podrás ordenar por orden alfabético, también filtrar la imforma
 
 * En el contenido de la zona de los campeones se muestra cada campeón en una carta con su imagen, nombre , título, información y el tipo de campeón que es.
 
+* Los colores que se usaron para el diseño de la página y la presentacion de las cartas son los siquientes: #937341 , #f1e6d0, rgba(0, 0, 0, 0.603), #f0b802af.
+
+* Los tipo de letra usados para la página y las cartas son los siguientes : 'Cardo', serif ; 'Lato', sans-serif; 
+
 ## Usuarios y su relación con el producto
 
 ### Historias de usuario
@@ -88,11 +92,13 @@ Un punto en contra es que no haya un auto corrector por si te equivocas al escri
 ### Historias de Usuarios :
  - Como jugador de LOL me gustaría saber quienes son los campeones por medio de una imagen,su nombre e información para poder reconocerlos.
 
- - Como jugador de LOL ne gustaría poder ordenar a los campeones en orden alfabético para ubicarlo de una forma rápida.
+ - Como jugador de LOL me gustaría poder ordenar a los campeones en orden alfabético para ubicarlo de una forma rápida.
 
- - Como jugador de LOL me gustaría ver las características de los campeones, para así poder conocer quien es el mejor según sus puntajes.
+ - Como jugador de LOL me gustaría ver las estadísticas de los campeones, para así poder conocer quien es el mejor según sus puntajes de ataque.
 
 - Como jugador de LOL me gustaría poder filtar los campeones por tipo, para conocer cual es la habilidad de cada uno.
+
+- Como jugador de LOL me gustaría poder buscar a cada campeon por su nombre, para poder ver a detalle cada uno.
 
  - Como jugador de LOL me gustaría ver las noticias recientes del juego, para estar informado.
 
