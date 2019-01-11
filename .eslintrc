@@ -38,6 +38,7 @@
   "globals": {
     "example": false,
     "dataLol":false,
-    "LOL":false
+    "LOL":false,
+    "Chart":false
   }
 }
