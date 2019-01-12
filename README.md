@@ -14,8 +14,6 @@
 ***
 
 ## Preámbulo
-
-<<<<<<< HEAD
 ¿Qué es League of Legends?
 
  ![LOL](https://lolstatic-a.akamaihd.net/frontpage/apps/prod/LolGameInfo-Harbinger/es_MX/8588e206d560a23f4d6dd0faab1663e13e84e21d/assets/assets/images/get-started/whatislol-intro.jpg)
