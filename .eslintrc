@@ -39,6 +39,7 @@
     "example": false,
     "dataLol":false,
     "LOL":false,
-    "google": false
+    "google": false,
+    "Chart":false
   }
 }
