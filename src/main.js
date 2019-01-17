@@ -1,11 +1,18 @@
-const lolDataTotal = LOL.data;
-fetch('lol.json')
-  .then(response => response.json())
-  .then(data => {
-    console.log(data.data);
-  }).catch(err => console.log(err));
-
-const arrLolTotal = Object.values(lolDataTotal);
+const lolDataTotal = 'http://127.0.0.1:5500/src/data/lol/lol.json';
+function dataFetch() {
+  let arrLolEspecifico;
+  fetch(lolDataTotal)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.data)
+      const arrLolTotal = Object.values(data.data);
+      arrLolEspecifico = dataLol.newArrayLol(arrLolTotal);
+      console.log(arrLolEspecifico);
+    }).catch(err => console.log(err));
+  return arrLolEspecifico;
+}
+const dataLolTotal = LOL.data;
+const arrLolTotal = Object.values(dataLolTotal);
 const arrLolEspecifico = dataLol.newArrayLol(arrLolTotal);
 // Creando las cartas de forma dinamica
 const containerCardTotal = document.getElementById('cards-total');
