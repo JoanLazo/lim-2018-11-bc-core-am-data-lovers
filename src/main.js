@@ -1,4 +1,10 @@
 const lolDataTotal = LOL.data;
+fetch('lol.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.data);
+  }).catch(err => console.log(err));
+
 const arrLolTotal = Object.values(lolDataTotal);
 const arrLolEspecifico = dataLol.newArrayLol(arrLolTotal);
 // Creando las cartas de forma dinamica
